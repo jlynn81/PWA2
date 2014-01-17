@@ -19,6 +19,44 @@
     <h2>Project and Task Manager</h2>
 </header>
 
+<div id="registration">
+    <form id="regform" name="regform" method="post">
+        <ul>
+            <li class="form">
+
+                <input type="text" name="username" id="username" class="words required" placeholder="Username"/>
+                <label class="reqs" id="username_req">*</label>
+                <span class="errors" id="username_error">Example: John Doe, Jane Doe</span>
+            </li>
+            <li class="form">
+                <input type="password" name="password" id="password" class="password words required" placeholder="Password"/>
+                <label class="reqs" id="password_req">*</label>
+                <div id="pmeter"><div id="pbar"></div></div>
+                <span class="errors" id="password_error"></span>
+            </li>
+            <li class="form">
+                <input type="text" name="email" id="email" class="required email" placeholder="Email Address"/>
+                <label class="reqs" id="email_req">*</label>
+                <span class="errors" id="email_error">Example: user@domain.com</span>
+            </li>
+            <li class="form">
+                <input type="text" name="phone" id="phone" class="phone" placeholder="Phone Number"/>
+                <label class="reqs" id="phone_req"></label>
+                <span class="errors" id="phone_error">Must match this format: (123)456-7890</span>
+            </li>
+
+        </ul>
+
+    </form>
+
+    <div class="note">
+        <h1 class="completer">All Most Done, Click Finish to Get Started Arranging your projects and Tasks!</h1>
+
+        <button type="submit" value="Submit">Register</button>
+
+    </div>
+</div>
+
 <footer>Copyright 2014 | Jennifer Brown | Programming for Web Applications II | All Rights Reserved </footer>
 
 
