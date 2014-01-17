@@ -1,6 +1,95 @@
-#html{
-    background: -webkit-linear-gradient(rgba(36,62,115,1),rgba(242,230,167,0)); /*Safari*/
-    			-moz-linear-gradient(rgba(36,62,115,1),rgba(242,230,167,0)); /*Fx 3.6-15*/
-    			linear-gradient(rgba(36,62,115,1),rgba(242,230,167,0)); /*Standard*/
-               
+
+body{
+    background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(242,230,167,0) 100%);/* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(242,230,167,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(242,230,167,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(242,230,167,0) 100%); /* Opera 11.10+ */
+    background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(242,230,167,0) 100%); /* W3C */
+
+}
+
+header{
+    background-color: #D6E1E7;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 10px;
+}
+header h1{
+    font-family: 'Playfair Display SC', serif;
+    font-size: 45pt;
+    color: #243E73;
+    margin: -30px;
+}
+
+h2{
+    font-family: 'Cardo', serif;
+    color: #4E74A6;
+}
+
+#cta{
+    margin-right: 20px; margin-top: 20px;
+    width: 480px;
+    height: 320px;
+}
+
+#login{
+    float: right;
+    font-size: 16pt;
+    border: none;
+    width: 422px;
+    margin-top: -270px;
+}
+
+#login, h4{
+    font-family: 'Ledger', serif;
+    text-align: right;
+}
+
+#login fieldset input{
+    width: 150px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+button {
+    border-top: 1px solid #d99873;
+    background: #f2e6a7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fbf851), to(#f2e6a7));
+    background: -webkit-linear-gradient(top, #fbf851, #f2e6a7);
+    background: -moz-linear-gradient(top, #fbf851, #f2e6a7);
+    background: -ms-linear-gradient(top, #fbf851, #f2e6a7);
+    background: -o-linear-gradient(top, #fbf851, #f2e6a7);
+    padding: 5px 10px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: #243e73;
+    font-size: 15px;
+    font-family: Georgia, Serif;
+    text-decoration: none;
+    vertical-align: middle;
+}
+button:hover {
+    border-top-color: #fbf851;
+    background: #fbf851;
+    color: #243e73;
+}
+button:active {
+    border-top-color: #f2e6a7;
+    background: #f2e6a7;
+}
+
+footer{
+    background: #F2E6A7;
+    background-image: -webkit-linear-gradient(top, #F2E6A7, #FBF951);
+    background-image: -moz-linear-gradient(top, #F2E6A7, #FBF951);
+    background-image: -ms-linear-gradient(top, #F2E6A7, #FBF951);
+    background-image: -o-linear-gradient(top, #F2E6A7, #FBF951);
+    background-image: linear-gradient(to bottom, #F2E6A7, #FBF951);
+    text-decoration: none;
+
 }
