@@ -28,6 +28,8 @@ h2{
 
 #cta{
     margin-right: 20px; margin-top: 20px;
+    border: outset;
+    border-radius: 10px;
     width: 480px;
     height: 320px;
 }
@@ -40,15 +42,28 @@ h2{
     margin-top: -270px;
 }
 
-#login, h4{
+#login, #register{
     font-family: 'Ledger', serif;
     text-align: right;
+}
+
+#register{
+    width: 480px;
+    float: right;
 }
 
 #login fieldset input{
     width: 150px;
     height: 20px;
     margin-bottom: 10px;
+}
+
+#projectDelivery, #incProductivity, #easyPreparation{
+    font-family: 'Ledger', serif;
+    float: right;
+}
+#incProductivity{
+    margin-right: 160px;
 }
 
 button {
@@ -69,7 +84,7 @@ button {
     text-shadow: rgba(0,0,0,.4) 0 1px 0;
     color: #243e73;
     font-size: 15px;
-    font-family: Georgia, Serif;
+    font-family: 'Ledger', serif;
     text-decoration: none;
     vertical-align: middle;
 }
@@ -83,13 +98,14 @@ button:active {
     background: #f2e6a7;
 }
 
+
 footer{
-    background: #F2E6A7;
-    background-image: -webkit-linear-gradient(top, #F2E6A7, #FBF951);
-    background-image: -moz-linear-gradient(top, #F2E6A7, #FBF951);
-    background-image: -ms-linear-gradient(top, #F2E6A7, #FBF951);
-    background-image: -o-linear-gradient(top, #F2E6A7, #FBF951);
-    background-image: linear-gradient(to bottom, #F2E6A7, #FBF951);
-    text-decoration: none;
+    background: linear-gradient(to bottom, rgba(242,230,167,1) 0%,rgba(30,87,153,0.01) 99%,rgba(30,87,153,0) 100%); /* W3C */    background: -moz-linear-gradient(top, rgba(242,230,167,1) 0%, rgba(30,87,153,0.01) 99%, rgba(30,87,153,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,230,167,1)), color-stop(99%,rgba(30,87,153,0.01)), color-stop(100%,rgba(30,87,153,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(242,230,167,1) 0%,rgba(30,87,153,0.01) 99%,rgba(30,87,153,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(242,230,167,1) 0%,rgba(30,87,153,0.01) 99%,rgba(30,87,153,0) 100%); /* Opera 11.10+ */
+    font-family: 'Ledger', serif;
+    text-align: center;
+    clear: both;
 
 }
