@@ -1,0 +1,6 @@
+#html{
+    background: -webkit-linear-gradient(rgba(36,62,115,1),rgba(242,230,167,0)); /*Safari*/
+    			-moz-linear-gradient(rgba(36,62,115,1),rgba(242,230,167,0)); /*Fx 3.6-15*/
+    			linear-gradient(rgba(36,62,115,1),rgba(242,230,167,0)); /*Standard*/
+               
+}
