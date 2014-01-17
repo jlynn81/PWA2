@@ -145,28 +145,33 @@ button:active {
     padding-top: 10px;
     background: #243e73;
     border-color: #4E74A6;
-    text-align: center;
+
 }
 
-#regform ul{
-    width: 232px;
-    float: left;
+#regform{
+    width: 330px;
+    height: 320px;
+    padding-top: 5px;
 }
 
 #regform ul{
     list-style: none;
+    padding-right: 5px; padding-left: 5px;
 }
 #regform label{
     display: block;
     margin-bottom: 4px;
 }
 #regform input{
-    border: 1px inset #91B7D9;
-
+    border: 2px inset #d99873;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #91B7D9;
+    color: #d6e1e7;
 }
-
-
-
+.form{
+    padding: 15px;
+}
 .form input{
     width: 220px;
 }
@@ -175,21 +180,23 @@ button:active {
     color: #91B7D9;
 }
 
-.completer{
+#note .completer{
+    width: 320px;
+    font-size: 20pt;
     float: right;
     color: #91B7D9;
+    padding-bottom: 5px;
 }
-.note{
-    clear: both;
-}
-.note h1{
-    width: 400px;
-    font-size: 16px;
+#note{
+    width: 330px;
+    padding-left: 5px;
+    margin-top: -220px; margin-right: 20px;
     float: right;
 }
-.note button{
+
+#note button{
     width: 150px;
-    clear: left;
+    float: right;
 }
 
 footer{
