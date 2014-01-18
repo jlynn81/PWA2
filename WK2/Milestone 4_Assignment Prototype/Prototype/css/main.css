@@ -207,7 +207,7 @@ a:hover{ color: #284370}
     float: right;
 }
 
-/*New Project Page*/
+/*New Project and Task Page*/
 #logout{
     font-size: 16pt;
     margin-right: 20px;
@@ -235,7 +235,7 @@ a:hover{ color: #284370}
     text-shadow: 1px 1px 1px #B1C2D6;
 }
 
-#newProject li input, select, #newTasks li input, select{
+#newProject li input select, #newTasks li input select{
     border: 2px inset #d99873;
     height: 25px;
     border-radius: 5px;
@@ -258,6 +258,67 @@ a:hover{ color: #284370}
     margin-right: 20px;
     float: right;
 }
+
+/*Project and Task Page*/
+
+#tasks button, #projects button{
+    float: right;
+    margin-top: -15px;
+
+}
+#projectname, #taskname{
+    width: 929px;
+    height: 75px;
+    margin: 30px 20px 20px 10px;
+    padding-top: 10px;
+    background: #243e73;
+    border-color: #4E74A6;
+    border-radius: 5px;
+}
+
+#projectname ul, #taskname ul{
+    width: 300px;
+    height: 54px;
+    list-style: none outside none;
+}
+
+#projectname label, #taskname label{
+    color: #B1C2D6;
+}
+
+#projectname .projectName, #taskname .taskName{
+    font-size: 20pt;
+}
+#projectname .dueDate, #taskname .dueDate{
+    font-size: 12pt;
+    margin: -100px 0px 5px 300px;
+    padding: 5px;
+}
+#projectname .dueDate input, #projectname .status input, #taskname .dueDate input, #taskname .status input{
+    border: 2px inset #d99873;
+    height: 25px;
+    border-radius: 5px;
+    color: #91B7D9;
+}
+
+#projectname .status, #taskname .status{
+    font-size: 12pt;
+    margin: -40px 0px 5px 300px;
+    padding: 5px;
+}
+
+#taskLink{
+    width: 150px;
+    height: 45px;
+    text-align: center;
+    margin-left: 600px;
+    margin-top: -100px;
+    padding: 5px;
+}
+.colorSelector{
+    float: right;
+}
+
 
 
 footer{

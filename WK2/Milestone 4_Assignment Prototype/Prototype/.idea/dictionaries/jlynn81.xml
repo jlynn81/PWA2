@@ -2,11 +2,15 @@
   <dictionary name="jlynn81">
     <words>
       <w>btns</w>
+      <w>deepskyblue</w>
+      <w>forestgreen</w>
       <w>projectform</w>
       <w>projectname</w>
       <w>regform</w>
       <w>reqs</w>
       <w>taskform</w>
+      <w>taskname</w>
+      <w>yyyy</w>
     </words>
   </dictionary>
 </component>
