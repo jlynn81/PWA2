@@ -121,6 +121,7 @@ button {
     -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
     box-shadow: rgba(0,0,0,1) 0 1px 0;
     text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    text-decoration: none;
     color: #243e73;
     font-size: 15px;
     font-family: 'Ledger', serif;
@@ -137,6 +138,12 @@ button:active {
     background: #f2e6a7;
 }
 
+a:link{ color: #0D1726;
+}
+a:visited{ color: #d99873}
+
+a:hover{ color: #284370}
+
 /*Registration Page CSS */
 #registration{
     width: 660px;
@@ -145,6 +152,7 @@ button:active {
     padding-top: 10px;
     background: #243e73;
     border-color: #4E74A6;
+    border-radius: 5px;
 
 }
 
@@ -154,7 +162,7 @@ button:active {
     padding-top: 5px;
 }
 
-#regform ul{
+#regform ul, #newProject ul, #newTasks ul{
     list-style: none;
     padding-right: 5px; padding-left: 5px;
 }
@@ -194,10 +202,63 @@ button:active {
     float: right;
 }
 
-#note button{
+#note button, #newProjectBtns button, #newTaskBtns button{
     width: 150px;
     float: right;
 }
+
+/*New Project Page*/
+#logout{
+    font-size: 16pt;
+    margin-right: 20px;
+    margin-top: -20px;
+    float: right;
+}
+
+#newProject, #newTasks{
+    width: 929px; height: 297px;
+    margin: 30px 0px 25px 0px;
+    padding-top: 10px;
+    background: #243e73;
+    border-color: #4E74A6;
+    border-radius: 5px;
+}
+
+#projects, #tasks{
+    font-size: 28pt;
+    font-family: 'Cardo', serif;
+}
+
+#projects h3, #tasks h3{
+    margin: 20px 0px 0px 20px;
+    color: #243e73;
+    text-shadow: 1px 1px 1px #B1C2D6;
+}
+
+#newProject li input, select, #newTasks li input, select{
+    border: 2px inset #d99873;
+    height: 25px;
+    border-radius: 5px;
+    color: #91B7D9;
+    float: right;
+    width: 300px;
+ }
+
+#projectform, #taskform{
+    width: 600px;
+}
+
+
+#newProject label, #newTasks label{
+    font-size: 16pt;
+    color: #f2e6a7;
+}
+#cancel, #finish{
+    margin-top: -20px;
+    margin-right: 20px;
+    float: right;
+}
+
 
 footer{
     background: linear-gradient(to bottom, rgba(242,230,167,1) 0%,rgba(30,87,153,0.01) 99%,rgba(30,87,153,0) 100%); /* W3C */    background: -moz-linear-gradient(top, rgba(242,230,167,1) 0%, rgba(30,87,153,0.01) 99%, rgba(30,87,153,0) 100%); /* FF3.6+ */
