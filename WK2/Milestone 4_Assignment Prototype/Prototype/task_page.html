@@ -7,7 +7,7 @@
     <title>Eygenda Tasks</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!--Web Fonts for site-->
     <link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC' rel='stylesheet' type='text/css'>
@@ -16,44 +16,89 @@
 
 </head>
 <body>
+<div id="container">
+    <header>
+        <img src="images/logo.png" alt="Eygenda Logo">
+        <h1>Eygenda</h1>
 
-<header>
-    <img src="images/logo.png" alt="Eygenda Logo">
-    <h1>Eygenda</h1>
+        <h2>Task Manager</h2>
+        <div id="logout">
+            <a href="main.html">Logout</a>
+        </div>
 
-    <h2>Task Manager</h2>
-    <div id="logout">
-        <a href="main.html">Logout</a>
+    </header>
+
+    <div id="tasks">
+        <h3>Current Tasks</h3>
+        <button type="submit" value="Submit">Add Task</button>
     </div>
 
-</header>
 
-<div id="tasks">
-    <h3>Current Tasks</h3>
-    <button type="submit" value="Submit">Add Task</button>
-</div>
+    <div id="taskname">
+        <ul>
+            <li>
+                <label class="taskName">Task Name</label>
+            </li>
+            <li>
+                <label class="description">Description</label>
+            </li>
+        </ul>
+        <br>
+        <ul class="dueDate">
+            <li>
+                <label>Due Date:</label>
+                <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
+                <label class="reqs" id="date_req"></label>
+            </li>
+        </ul>
+        <ul class="status">
+            <li>
+                <label>Status:</label>
+                    <select>
+                        <option value="select">Select from Drop Down</option>
+                        <option value="urgent">Urgent</option>
+                        <option value="normal">Normal</option>
+                        <option value="delayed">Delayed</option>
+                        <option value="finished">Finished</option>
+                    </select>
 
+            </li>
+        </ul>
 
-<div id="taskname">
-    <ul>
-        <li>
-            <label class="taskName">Task Name</label>
-        </li>
-        <li>
-            <label class="description">Description</label>
-        </li>
-    </ul>
-    <br>
-    <ul class="dueDate">
-        <li>
-            <label>Due Date:</label>
-            <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
-            <label class="reqs" id="date_req"></label>
-        </li>
-    </ul>
-    <ul class="status">
-        <li>
-            <label>Status:</label>
+        <div id="taskLink"><a href="project_page.html">Back to Project</a>
+            <br>
+                <ul>
+                    <li class="colorSelector">
+                        <select>
+                            <option value="color1" style="background: forestgreen"></option>
+                            <option value="color1" style="background: red"></option>
+                            <option value="color2" style="background: yellow"></option>
+                            <option value="color3" style="background: deepskyblue"></option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <div id="taskname">
+        <ul>
+            <li>
+                <label class="taskName">Task Name</label>
+            </li>
+            <li>
+                <label class="description">Description</label>
+            </li>
+        </ul>
+        <br>
+        <ul class="dueDate">
+            <li>
+                <label>Due Date:</label>
+                <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
+                <label class="reqs" id="date_req"></label>
+            </li>
+        </ul>
+        <ul class="status">
+            <li>
+                <label>Status:</label>
                 <select>
                     <option value="select">Select from Drop Down</option>
                     <option value="urgent">Urgent</option>
@@ -62,11 +107,11 @@
                     <option value="finished">Finished</option>
                 </select>
 
-        </li>
-    </ul>
+            </li>
+        </ul>
 
-    <div id="taskLink"><a href="project_page.html">Back to Project</a>
-        <br>
+        <div id="taskLink"><a href="project_page.html">Back to Project</a>
+            <br>
             <ul>
                 <li class="colorSelector">
                     <select>
@@ -79,150 +124,100 @@
             </ul>
         </div>
     </div>
-<div id="taskname">
-    <ul>
-        <li>
-            <label class="taskName">Task Name</label>
-        </li>
-        <li>
-            <label class="description">Description</label>
-        </li>
-    </ul>
-    <br>
-    <ul class="dueDate">
-        <li>
-            <label>Due Date:</label>
-            <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
-            <label class="reqs" id="date_req"></label>
-        </li>
-    </ul>
-    <ul class="status">
-        <li>
-            <label>Status:</label>
-            <select>
-                <option value="select">Select from Drop Down</option>
-                <option value="urgent">Urgent</option>
-                <option value="normal">Normal</option>
-                <option value="delayed">Delayed</option>
-                <option value="finished">Finished</option>
-            </select>
-
-        </li>
-    </ul>
-
-    <div id="taskLink"><a href="project_page.html">Back to Project</a>
-        <br>
+    <div id="taskname">
         <ul>
-            <li class="colorSelector">
-                <select>
-                    <option value="color1" style="background: forestgreen"></option>
-                    <option value="color1" style="background: red"></option>
-                    <option value="color2" style="background: yellow"></option>
-                    <option value="color3" style="background: deepskyblue"></option>
-                </select>
+            <li>
+                <label class="taskName">Task Name</label>
+            </li>
+            <li>
+                <label class="description">Description</label>
             </li>
         </ul>
-    </div>
-</div>
-<div id="taskname">
-    <ul>
-        <li>
-            <label class="taskName">Task Name</label>
-        </li>
-        <li>
-            <label class="description">Description</label>
-        </li>
-    </ul>
-    <br>
-    <ul class="dueDate">
-        <li>
-            <label>Due Date:</label>
-            <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
-            <label class="reqs" id="date_req"></label>
-        </li>
-    </ul>
-    <ul class="status">
-        <li>
-            <label>Status:</label>
-            <select>
-                <option value="select">Select from Drop Down</option>
-                <option value="urgent">Urgent</option>
-                <option value="normal">Normal</option>
-                <option value="delayed">Delayed</option>
-                <option value="finished">Finished</option>
-            </select>
-
-        </li>
-    </ul>
-
-    <div id="taskLink"><a href="project_page.html">Back to Project</a>
         <br>
-        <ul>
-            <li class="colorSelector">
-                <select>
-                    <option value="color1" style="background: forestgreen"></option>
-                    <option value="color1" style="background: red"></option>
-                    <option value="color2" style="background: yellow"></option>
-                    <option value="color3" style="background: deepskyblue"></option>
-                </select>
+        <ul class="dueDate">
+            <li>
+                <label>Due Date:</label>
+                <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
+                <label class="reqs" id="date_req"></label>
             </li>
         </ul>
-    </div>
-</div>
-<div id="taskname">
-    <ul>
-        <li>
-            <label class="taskName">Task Name</label>
-        </li>
-        <li>
-            <label class="description">Description</label>
-        </li>
-    </ul>
-    <br>
-    <ul class="dueDate">
-        <li>
-            <label>Due Date:</label>
-            <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
-            <label class="reqs" id="date_req"></label>
-        </li>
-    </ul>
-    <ul class="status">
-        <li>
-            <label>Status:</label>
-            <select>
-                <option value="select">Select from Drop Down</option>
-                <option value="urgent">Urgent</option>
-                <option value="normal">Normal</option>
-                <option value="delayed">Delayed</option>
-                <option value="finished">Finished</option>
-            </select>
-
-        </li>
-    </ul>
-
-    <div id="taskLink"><a href="project_page.html">Back to Project</a>
-        <br>
-        <ul>
-            <li class="colorSelector">
+        <ul class="status">
+            <li>
+                <label>Status:</label>
                 <select>
-                    <option value="color1" style="background: forestgreen"></option>
-                    <option value="color1" style="background: red"></option>
-                    <option value="color2" style="background: yellow"></option>
-                    <option value="color3" style="background: deepskyblue"></option>
+                    <option value="select">Select from Drop Down</option>
+                    <option value="urgent">Urgent</option>
+                    <option value="normal">Normal</option>
+                    <option value="delayed">Delayed</option>
+                    <option value="finished">Finished</option>
                 </select>
+
             </li>
         </ul>
+
+        <div id="taskLink"><a href="project_page.html">Back to Project</a>
+            <br>
+            <ul>
+                <li class="colorSelector">
+                    <select>
+                        <option value="color1" style="background: forestgreen"></option>
+                        <option value="color1" style="background: red"></option>
+                        <option value="color2" style="background: yellow"></option>
+                        <option value="color3" style="background: deepskyblue"></option>
+                    </select>
+                </li>
+            </ul>
+        </div>
     </div>
+    <div id="taskname">
+        <ul>
+            <li>
+                <label class="taskName">Task Name</label>
+            </li>
+            <li>
+                <label class="description">Description</label>
+            </li>
+        </ul>
+        <br>
+        <ul class="dueDate">
+            <li>
+                <label>Due Date:</label>
+                <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
+                <label class="reqs" id="date_req"></label>
+            </li>
+        </ul>
+        <ul class="status">
+            <li>
+                <label>Status:</label>
+                <select>
+                    <option value="select">Select from Drop Down</option>
+                    <option value="urgent">Urgent</option>
+                    <option value="normal">Normal</option>
+                    <option value="delayed">Delayed</option>
+                    <option value="finished">Finished</option>
+                </select>
+
+            </li>
+        </ul>
+
+        <div id="taskLink"><a href="project_page.html">Back to Project</a>
+            <br>
+            <ul>
+                <li class="colorSelector">
+                    <select>
+                        <option value="color1" style="background: forestgreen"></option>
+                        <option value="color1" style="background: red"></option>
+                        <option value="color2" style="background: yellow"></option>
+                        <option value="color3" style="background: deepskyblue"></option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>Copyright 2014 | Jennifer Brown | Programming for Web Applications II | All Rights Reserved </footer>
+
 </div>
-
-
-
-
-
-</div>
-
-<footer>Copyright 2014 | Jennifer Brown | Programming for Web Applications II | All Rights Reserved </footer>
-
 
 </body>
 </html>

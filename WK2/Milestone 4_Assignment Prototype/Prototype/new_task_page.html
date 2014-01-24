@@ -6,7 +6,7 @@
     <title>Eygenda, Create New Task</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!--Web Fonts for site-->
     <link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC' rel='stylesheet' type='text/css'>
@@ -15,71 +15,71 @@
 
 </head>
 <body>
+<div id="container">
+    <header>
+        <img src="images/logo.png" alt="Eygenda Logo">
+        <h1>Eygenda</h1>
 
-<header>
-    <img src="images/logo.png" alt="Eygenda Logo">
-    <h1>Eygenda</h1>
+        <h2></h2>
+        <div id="logout">
+            <a href="main.html">Logout</a>
+        </div>
 
-    <h2></h2>
-    <div id="logout">
-        <a href="main.html">Logout</a>
+    </header>
+    <div id="tasks">
+        <h3>Add A New Task</h3>
     </div>
 
-</header>
-<div id="tasks">
-    <h3>Add A New Task</h3>
-</div>
+
+    <div id="newTasks">
 
 
-<div id="newTasks">
+        <form id="taskform" name="taskform" method="post">
+            <ul>
+                <li class="form">
+                    <label>Task Name</label>
+                    <input type="text" name="taskname" id="taskname" class="words required" placeholder=""/>
+                    <label class="reqs" id="taskname_req"></label>
+                    <span class="errors" id="taskname_error"></span>
+                </li>
+                <li class="form">
+                    <label>Description Name</label>
+                    <input type="desc" name="desc" id="description" class="words required" placeholder="Description"/>
+                    <label class="reqs" id="desc_req"></label>
+                    <span class="errors" id="desc_error"></span>
+                </li>
+                <li class="form">
+                    <label>Due Date</label>
+                    <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
+                    <label class="reqs" id="date_req"></label>
+                    <span class="errors" id="date_error"></span>
+                </li>
+                <li class="form">
+                    <label>Project Status</label>
+
+                    <select>
+                        <option value="select">Select from Drop Down</option>
+                        <option value="urgent">Urgent</option>
+                        <option value="normal">Normal</option>
+                        <option value="delayed">Delayed</option>
+                        <option value="finished">Finished</option>
+                    </select>
+                </li>
+
+            </ul>
 
 
-    <form id="taskform" name="taskform" method="post">
-        <ul>
-            <li class="form">
-                <label>Task Name</label>
-                <input type="text" name="taskname" id="taskname" class="words required" placeholder=""/>
-                <label class="reqs" id="taskname_req"></label>
-                <span class="errors" id="taskname_error"></span>
-            </li>
-            <li class="form">
-                <label>Description Name</label>
-                <input type="desc" name="desc" id="description" class="words required" placeholder="Description"/>
-                <label class="reqs" id="desc_req"></label>
-                <span class="errors" id="desc_error"></span>
-            </li>
-            <li class="form">
-                <label>Due Date</label>
-                <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
-                <label class="reqs" id="date_req"></label>
-                <span class="errors" id="date_error"></span>
-            </li>
-            <li class="form">
-                <label>Project Status</label>
+        </form>
 
-                <select>
-                    <option value="select">Select from Drop Down</option>
-                    <option value="urgent">Urgent</option>
-                    <option value="normal">Normal</option>
-                    <option value="delayed">Delayed</option>
-                    <option value="finished">Finished</option>
-                </select>
-            </li>
+        <div id="newTaskBtns">
+            <button type="submit" value="Submit" id="cancel"><a href="task_page.html">Cancel</a></button>
+            <button type="submit" value="Submit" id="finish"><a href="task_page.html">Finish</a> </button>
+        </div>
 
-        </ul>
-
-
-    </form>
-
-    <div id="newTaskBtns">
-        <button type="submit" value="Submit" id="cancel"><a href="task_page.html">Cancel</a></button>
-        <button type="submit" value="Submit" id="finish"><a href="task_page.html">Finish</a> </button>
     </div>
 
+    <footer>Copyright 2014 | Jennifer Brown | Programming for Web Applications II | All Rights Reserved </footer>
 </div>
-
-<footer>Copyright 2014 | Jennifer Brown | Programming for Web Applications II | All Rights Reserved </footer>
-
 
 </body>
 </html>

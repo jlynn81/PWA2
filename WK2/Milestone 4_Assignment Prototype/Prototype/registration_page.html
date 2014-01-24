@@ -7,59 +7,59 @@
     <title>Eygenda Registration</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
+<div id="container">
+    <header>
+        <img src="images/logo.png" alt="Eygenda Logo">
+        <h1>Eygenda</h1>
 
-<header>
-    <img src="images/logo.png" alt="Eygenda Logo">
-    <h1>Eygenda</h1>
+        <h2>Project and Task Manager Registration Page</h2>
+    </header>
 
-    <h2>Project and Task Manager Registration Page</h2>
-</header>
+    <div id="registration">
+        <form id="regform" name="regform" method="post">
+            <ul>
+                <li class="form">
 
-<div id="registration">
-    <form id="regform" name="regform" method="post">
-        <ul>
-            <li class="form">
+                    <input type="text" name="username" id="username" class="words required" placeholder="Username"/>
+                    <label class="reqs" id="username_req"></label>
+                    <span class="errors" id="username_error">Example: John Doe, Jane Doe</span>
+                </li>
+                <li class="form">
+                    <input type="password" name="password" id="password" class="password words required" placeholder="Password"/>
+                    <label class="reqs" id="password_req"></label>
+                    <div id="pmeter"><div id="pbar"></div></div>
+                    <span class="errors" id="password_error"></span>
+                </li>
+                <li class="form">
+                    <input type="text" name="email" id="email" class="required email" placeholder="Email Address"/>
+                    <label class="reqs" id="email_req"></label>
+                    <span class="errors" id="email_error">Example: user@domain.com</span>
+                </li>
+                <li class="form">
+                    <input type="text" name="phone" id="phone" class="phone" placeholder="Phone Number"/>
+                    <label class="reqs" id="phone_req"></label>
+                    <span class="errors" id="phone_error">Must match this format: (123)456-7890</span>
+                </li>
 
-                <input type="text" name="username" id="username" class="words required" placeholder="Username"/>
-                <label class="reqs" id="username_req"></label>
-                <span class="errors" id="username_error">Example: John Doe, Jane Doe</span>
-            </li>
-            <li class="form">
-                <input type="password" name="password" id="password" class="password words required" placeholder="Password"/>
-                <label class="reqs" id="password_req"></label>
-                <div id="pmeter"><div id="pbar"></div></div>
-                <span class="errors" id="password_error"></span>
-            </li>
-            <li class="form">
-                <input type="text" name="email" id="email" class="required email" placeholder="Email Address"/>
-                <label class="reqs" id="email_req"></label>
-                <span class="errors" id="email_error">Example: user@domain.com</span>
-            </li>
-            <li class="form">
-                <input type="text" name="phone" id="phone" class="phone" placeholder="Phone Number"/>
-                <label class="reqs" id="phone_req"></label>
-                <span class="errors" id="phone_error">Must match this format: (123)456-7890</span>
-            </li>
+            </ul>
 
-        </ul>
+        </form>
 
-    </form>
+        <div id="note">
+            <h1 class="completer">
+                All Most Done! Please fill in the Form to the left then click Finish to get started arranging your projects and tasks!</h1>
 
-    <div id="note">
-        <h1 class="completer">
-            All Most Done! Please fill in the Form to the left then click Finish to get started arranging your projects and tasks!</h1>
+            <button type="submit" value="Submit">Register</button>
 
-        <button type="submit" value="Submit">Register</button>
-
+        </div>
     </div>
+
+    <footer>Copyright 2014 | Jennifer Brown | Programming for Web Applications II | All Rights Reserved </footer>
+
 </div>
-
-<footer>Copyright 2014 | Jennifer Brown | Programming for Web Applications II | All Rights Reserved </footer>
-
-
 </body>
 </html>
