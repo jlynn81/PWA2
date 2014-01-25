@@ -106,6 +106,12 @@
 	
 	
 	init();
+
+    $('button').on('click', function(e){
+        loadApp();
+        return false;
+        console.log(e);
+    });
 	
 		
 	/*
