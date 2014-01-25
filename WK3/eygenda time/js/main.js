@@ -22,7 +22,20 @@
 	========================= APPLICATION FUNCTIONS	
 	*/
 	
-	var loadApp = function(){};
+	var loadApp = function(){
+        $.ajax({
+            url: 'xhr/list.php',
+            type: 'get',
+            dataType: 'json',
+            success: function(response){
+                var land = response.landing;
+                var html = '';
+                var html = $.render(land, "landtemplate");
+
+                $('container').append(html);
+            }
+        });
+    };
 	
 	
 	var loadLanding = function(){
@@ -63,8 +76,13 @@
             type: 'post',
             dataType: 'json',
             success: function(response){
-                
+                if(response.error){
+                    showLoginError();
+                }else{
+                    loadApp();
+                }
             }
+
         })
     }
 	
