@@ -22,21 +22,21 @@
 	========================= APPLICATION FUNCTIONS	
 	*/
 	
-	    var loadApp = function(){
-        	console.log('test-app');
-            $.ajax({
-                url: 'xhr/list.php',
-                type: 'get',
-                dataType: 'json',
-                success: function(response){
-                    var land = response.landing;
-                    var html = '';
-                    var html = $.render(land, "landtemplate");
+	// var loadApp = function(){
+ //       	console.log('test-app');
+ //        $.ajax({
+ //            url: 'xhr/list.php',
+ //            type: 'get',
+ //            dataType: 'json',
+ //            success: function(response){
+ //                var land = response.landing;
+ //                var html = '';
+ //                var html = $.render(land, "landtemplate");
 
-                    $('container').append(html);
-                }
-            });
-        };
+ //                $('container').append(html);
+ //            }
+ //        });
+ //    };
 
  		var loadApp = function(){
 	
