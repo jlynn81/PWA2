@@ -4,7 +4,7 @@
 */
 
 (function($){
-	
+	console.log('test');
 	/*
 	===============================================
 	=========================== APPLICATION GLOBALS	
@@ -22,29 +22,51 @@
 	========================= APPLICATION FUNCTIONS	
 	*/
 	
-	var loadApp = function(){
-        $.ajax({
-            url: 'xhr/list.php',
-            type: 'get',
-            dataType: 'json',
-            success: function(response){
-                var land = response.landing;
-                var html = '';
-                var html = $.render(land, "landtemplate");
+	    var loadApp = function(){
+        	console.log('test-app');
+            $.ajax({
+                url: 'xhr/list.php',
+                type: 'get',
+                dataType: 'json',
+                success: function(response){
+                    var land = response.landing;
+                    var html = '';
+                    var html = $.render(land, "landtemplate");
 
-                $('container').append(html);
-            }
-        });
-    };
+                    $('container').append(html);
+                }
+            });
+        };
+
+ 		var loadApp = function(){
+	
+		$.get('templates/app.html', function(html){
+			var h = $(html);
+			var appCode = h.find('#template_app').html();
+			$.template('app', appCode);		// compile template
+			$.render(currentUser, 'app');		// use template
+			container.html(appCode);
+			
+			//loadProjects();
+			
+			//Navigation Click Events
+			$('#logout').on('click', logout);
+			//$('#p-link').on('click', loadApp);
+		}); 
+		return false;
+	};
 	
 	
 	var loadLanding = function(){
+		console.log('test');
 		$.get('templates/landing.html', function(html){
 			var h = $(html);
 			var landingCode = h.find('#template_landing').html();
 			$.template('landing', landingCode);		// compile template
 			$.render(currentUser, 'landing');		// use template
 			container.html(landingCode);
+
+			$('button').on('click', login);
 		});
 	};
 	
@@ -66,18 +88,23 @@
 		});
 	};
 
+
     var login = function(){
+    	var user = $('#username').val();
+		var pass = $('#password').val();
+
+    	console.log('test');
         $.ajax({
             url: 'xhr/login.php',
             data: {
-                username: $('#username').val(),
-                password: $('#password').val()
+                username: user,
+				password: pass 
             },
             type: 'post',
             dataType: 'json',
             success: function(response){
                 if(response.error){
-                    showLoginError();
+                    //showLoginError();
                 }else{
                     loadApp();
                 }
@@ -92,26 +119,11 @@
 	//	SETUP FOR INIT
 		
 	var init = function(){
-        $('#container').empty();
-        $.get('templates/landing.html', function(htmlArg){
-            var lang = $(htmlArg).find('#template_landing');
-
-            $.template('landtemplate', lang);
-            var html = $.render('', 'landtemplate');
-            $('#container').append(html);
-        });
-	
 		checkLoginState();
+		/* loadTemplates(); */
 	};
 	
-	
 	init();
-
-    $('button').on('click', function(e){
-        loadApp();
-        return false;
-        console.log(e);
-    });
 	
 		
 	/*
@@ -129,7 +141,18 @@
 	===============================================
 	*/
 		
-		
+	var logout = function(){
+	
+		$.ajax({
+			url: 'xhr/logout.php',
+			type: 'GET',
+			dataType: 'json',
+			success: function(response){
+				loadLanding();
+			}
+		});
+		return false;
+	};
 
 	
 })(jQuery); // end private scope
