@@ -54,7 +54,7 @@
 
 			$('#login_btn').on('click', login);
 			$('#reg_btn').on('click', loadRegForm);
-            $('submit_btn').on('click', register);
+
 
 		});
 	};
@@ -110,30 +110,13 @@
 			$.template('reg', regCode);		// compile template
 			$.render(currentUser, 'reg');		// use template
 			$('#container').html(regCode);
-			
 
+            $('#submit_btn').on('click', register);
 		}); 
 		return false;
 	};
 	
 	////// Register New User //////
-
-    var checkRegForm = function(){
-        $.ajax({
-            url: 'xhr/check_login.php',
-            type: 'get',
-            dataType: 'json',
-            success: function(response){
-                if(response.user){
-                    loadApp();
-                }else{
-                    //if error
-                    loadLanding();
-                    $('input, textarea').placeholder();
-                }
-            }
-        });
-    };
 
 	var register = function(){
 	
@@ -169,7 +152,6 @@
 		
 	var init = function(){
 		checkLoginState();
-        checkRegForm();
 		/* loadTemplates(); */
 	};
 	
