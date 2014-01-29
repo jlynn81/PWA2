@@ -1,0 +1,334 @@
+
+body{
+    background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(242,230,167,0) 100%);/* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(242,230,167,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(242,230,167,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(242,230,167,0) 100%); /* Opera 11.10+ */
+    background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(242,230,167,0) 100%); /* W3C */
+    border-radius: 1.25%;
+    border-width: 2em;
+    font-family: 'Ledger', serif;;
+}
+
+header{
+    background-color: #91B7D9;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 10px;
+}
+header h1{
+    font-family: 'Playfair Display SC', serif;
+    font-size: 45pt;
+    color: #243E73;
+    text-shadow: 1px 1px 1px #f2e6a7;
+    margin: -30px;
+}
+
+h2{
+    font-family: 'Cardo', serif;
+    color: #4E74A6;
+    text-shadow: 1px 1px 1px #F2E6A7;
+}
+
+#preview img{
+    width: 500px;
+    height: 320px;
+    padding-top: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #243E73;
+    }
+
+#login{
+    float: right;
+    font-size: 16pt;
+    border: none;
+    width: 422px;
+    margin-top: -270px;
+}
+
+#login, #register{
+    text-align: right;
+}
+
+#register{
+    width: 370px;
+    height: 150px;
+    float: right;
+}
+#register h4{
+    text-align: center;
+    font-size: 16pt;
+}
+#register button{
+    margin-right: 115px;
+    width: 150px;
+}
+
+
+#login fieldset input{
+    width: 150px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+#projectDelivery, #incProductivity, #easyPreparation{
+    background: -moz-linear-gradient(top, rgba(145,183,217,0) 0%, rgba(145,183,217,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(145,183,217,0)), color-stop(100%,rgba(145,183,217,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(145,183,217,0) 0%,rgba(145,183,217,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(145,183,217,0) 0%,rgba(145,183,217,1) 100%); /* Opera 11.10+ */
+    border-color: #243E73;
+    border-radius: 10px;
+    width: 150px;
+    height: 144px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px #243E73;
+    float: left;
+}
+
+
+#incProductivity{
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#projectDelivery p, #incProductivity p, #easyPreparation p{
+    margin-top: 10px;
+}
+
+
+ul{
+    font-size: 8pt;
+    padding: 10px 15px 10px 15px;
+    margin-top: -10px;
+}
+
+button {
+    border-top: 1px solid #d99873;
+    background: #f2e6a7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fbf851), to(#f2e6a7));
+    background: -webkit-linear-gradient(top, #fbf851, #f2e6a7);
+    background: -moz-linear-gradient(top, #fbf851, #f2e6a7);
+    background: -ms-linear-gradient(top, #fbf851, #f2e6a7);
+    background: -o-linear-gradient(top, #fbf851, #f2e6a7);
+    padding: 5px 10px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    text-decoration: none;
+    color: #243e73;
+    font-size: 15px;
+    font-family: 'Ledger', serif;
+    text-decoration: none;
+    vertical-align: middle;
+}
+button:hover {
+    border-top-color: #fbf851;
+    background: #fbf851;
+    color: #243e73;
+}
+button:active {
+    border-top-color: #f2e6a7;
+    background: #f2e6a7;
+}
+
+a:link{ color: #0D1726;
+}
+a:visited{ color: #d99873}
+
+a:hover{ color: #284370}
+
+/*Registration Page CSS */
+#registration{
+    width: 660px;
+    height: 330px;
+    margin: 30px 25px 25px 25px;
+    padding-top: 10px;
+    background: #243e73;
+    border-color: #4E74A6;
+    border-radius: 5px;
+
+}
+
+#regform{
+    width: 330px;
+    height: 320px;
+    padding-top: 5px;
+}
+
+#regform ul, #newProject ul, #newTasks ul{
+    list-style: none;
+    padding-right: 5px; padding-left: 5px;
+}
+#regform label{
+    display: block;
+    margin-bottom: 4px;
+}
+#regform input{
+    border: 2px inset #d99873;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #91B7D9;
+    color: #d6e1e7;
+}
+.form{
+    padding: 15px;
+}
+.form input{
+    width: 220px;
+}
+
+.form span{
+    color: #91B7D9;
+}
+
+#note .completer{
+    width: 320px;
+    font-size: 20pt;
+    float: right;
+    color: #91B7D9;
+    padding-bottom: 5px;
+}
+#note{
+    width: 330px;
+    padding-left: 5px;
+    margin-top: -325px; margin-right: 20px;
+    float: right;
+}
+
+#note button, #newProjectBtns button, #newTaskBtns button{
+    width: 150px;
+    float: right;
+}
+
+/*New Project and Task Page*/
+#logout{
+    font-size: 16pt;
+    margin-right: 20px;
+    margin-top: -20px;
+    float: right;
+}
+
+#newProject, #newTasks{
+    width: 929px; height: 297px;
+    margin: 30px 0px 25px 0px;
+    padding-top: 10px;
+    background: #243e73;
+    border-color: #4E74A6;
+    border-radius: 5px;
+}
+
+#projects, #tasks{
+    font-size: 28pt;
+    font-family: 'Cardo', serif;
+}
+
+#projects h3, #tasks h3{
+    margin: 20px 0px 0px 20px;
+    color: #243e73;
+    text-shadow: 1px 1px 1px #B1C2D6;
+}
+
+#newProject li input select, #newTasks li input select{
+    border: 2px inset #d99873;
+    height: 25px;
+    border-radius: 5px;
+    color: #91B7D9;
+    float: right;
+    width: 300px;
+ }
+
+#projectform, #taskform{
+    width: 600px;
+}
+
+
+#newProject label, #newTasks label{
+    font-size: 16pt;
+    color: #f2e6a7;
+}
+#cancel, #finish{
+    margin-top: -20px;
+    margin-right: 20px;
+    float: right;
+}
+
+/*Project and Task Page*/
+
+#tasks button, #projects button{
+    float: right;
+    margin-top: -15px;
+
+}
+#projectname, #taskname{
+    width: 929px;
+    height: 75px;
+    margin: 30px 20px 20px 10px;
+    padding-top: 10px;
+    background: #243e73;
+    border-color: #4E74A6;
+    border-radius: 5px;
+}
+
+#projectname ul, #taskname ul{
+    width: 300px;
+    height: 54px;
+    list-style: none outside none;
+}
+
+#projectname label, #taskname label{
+    color: #B1C2D6;
+}
+
+#projectname .projectName, #taskname .taskName{
+    font-size: 20pt;
+}
+#projectname .dueDate, #taskname .dueDate{
+    font-size: 12pt;
+    margin: -100px 0px 5px 300px;
+    padding: 5px;
+}
+#projectname .dueDate input, #projectname .status input, #taskname .dueDate input, #taskname .status input{
+    border: 2px inset #d99873;
+    height: 25px;
+    border-radius: 5px;
+    color: #91B7D9;
+}
+
+#projectname .status, #taskname .status{
+    font-size: 12pt;
+    margin: -40px 0px 5px 300px;
+    padding: 5px;
+}
+
+#taskLink{
+    width: 150px;
+    height: 45px;
+    text-align: center;
+    margin-left: 600px;
+    margin-top: -100px;
+    padding: 5px;
+}
+.colorSelector{
+    float: right;
+}
+
+
+
+footer{
+    background: linear-gradient(to bottom, rgba(242,230,167,1) 0%,rgba(30,87,153,0.01) 99%,rgba(30,87,153,0) 100%); /* W3C */    background: -moz-linear-gradient(top, rgba(242,230,167,1) 0%, rgba(30,87,153,0.01) 99%, rgba(30,87,153,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,230,167,1)), color-stop(99%,rgba(30,87,153,0.01)), color-stop(100%,rgba(30,87,153,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(242,230,167,1) 0%,rgba(30,87,153,0.01) 99%,rgba(30,87,153,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(242,230,167,1) 0%,rgba(30,87,153,0.01) 99%,rgba(30,87,153,0) 100%); /* Opera 11.10+ */
+
+    font-size: 12pt;
+    text-align: center;
+    clear: both;
+
+}
