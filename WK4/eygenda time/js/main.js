@@ -42,7 +42,7 @@
 		return false;
 	};
 	
-	
+	//Loads the Landing/Home page of the Manager
 	var loadLanding = function(){
 		console.log('test');
 		$.get('templates/landing.html', function(html){
@@ -59,7 +59,7 @@
 		});
 	};
 	
-	
+	//Checks the login state of the User
 	var checkLoginState = function(){
 		$.ajax({
 			url: 'xhr/check_login.php',
@@ -93,7 +93,9 @@
             dataType: 'json',
             success: function(response){
                 if(response.error){
+
                     //showLoginError();
+                    //$('#registration .err_msg').text(response.error);
                 }else{
                     loadApp();
                 }
@@ -101,6 +103,8 @@
 
         })
     };
+
+    //Loads the Registration Page
 
     var loadRegForm = function(){
 	
@@ -115,14 +119,16 @@
 		}); 
 		return false;
 	};
+
+
 	
 	////// Register New User //////
 
 	var register = function(){
-	
-		var user = $('#regform input#user').val(),
-			email = $('#regform input#email').val(),
-			pwd = $('#regform input#pwd').val();
+
+		var user = $('#user').val(),
+			email = $('#email').val(),
+			pwd = $('#pass').val();
 
             console.log('test');
 			$.ajax({
@@ -137,13 +143,44 @@
 				success: function(response){
 					if(response.error){
 						$('#registration .err_msg').text(response.error);
+                        console.log(response.error);
 					}else{
-						loadApp();
-					}
+                        loadApp();
+                    }
+
 				}
 			});
 			return false;
 	};
+
+    //Adding a New Project to the Manager
+
+    var loadNewProject = function(){
+        $.get('templates/app.html', function(html){
+            var p = $(html);
+            var projectCode = p.find('#template_project_view').html();
+            $.template('app', projectCode);
+            $.render(currentUser, 'app');
+            container.html(projectCode);
+
+            $('#add_project_btn').on('click', projectPage);
+        });
+    };
+
+    var projectPage = function(){
+        //var projName = $()
+
+        console.log('test');
+        $.ajax({
+            url: 'xhr/new_project.php',
+            type: 'get',
+            dataType: 'json',
+            success: function(response){
+                loadNewProject();
+            }
+        });
+        return false;
+    };
 	
 	
 
@@ -186,14 +223,11 @@
 		return false;
 	};
 
-    var projectPage = function(){
-        $.ajax({
-            url: 'xhr/'
-        })
-    }
 
 
-	
+
+
+
 })(jQuery); // end private scope
 
 

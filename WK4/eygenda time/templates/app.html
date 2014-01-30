@@ -22,165 +22,29 @@
 
         <div id="projects">
             <h3>Current Projects</h3>
-            <button type="submit" value="Submit">Add Project</button>
+            <button id="add_project_btn" type="submit" value="Submit">Add Project</button>
         </div>
-
 
         <div id="projectname">
             <ul>
                 <li>
-                    <label class="projectName">Project Name</label>
+                    <label class="projectName">{{=projectName}}</label>
                 </li>
                 <li>
-                    <label class="description">Description</label>
+                    <label class="description">{{=description}}</label>
                 </li>
             </ul>
             <br>
             <ul class="dueDate">
                 <li>
-                    <label>Due Date:</label>
+                    <label id="due_date">{{=dueDate}}</label>
                     <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
                     <label class="reqs" id="date_req"></label>
                 </li>
             </ul>
             <ul class="status">
                 <li>
-                    <label>Status:</label>
-                    <select>
-                        <option value="select">Select from Drop Down</option>
-                        <option value="urgent">Urgent</option>
-                        <option value="normal">Normal</option>
-                        <option value="delayed">Delayed</option>
-                        <option value="finished">Finished</option>
-                    </select>
-
-                </li>
-            </ul>
-
-            <div id="taskLink"><b><a href="task_page.html">Tasks</a></b>
-                <br>
-                <ul>
-                    <li class="colorSelector">
-                        <select>
-                            <option value="color1" style="background: forestgreen"></option>
-                            <option value="color1" style="background: red"></option>
-                            <option value="color2" style="background: yellow"></option>
-                            <option value="color3" style="background: deepskyblue"></option>
-                        </select>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div id="projectname">
-            <ul>
-                <li>
-                    <label class="projectName">Project Name</label>
-                </li>
-                <li>
-                    <label class="description">Description</label>
-                </li>
-            </ul>
-            <br>
-            <ul class="dueDate">
-                <li>
-                    <label>Due Date:</label>
-                    <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
-                    <label class="reqs" id="date_req"></label>
-                </li>
-            </ul>
-            <ul class="status">
-                <li>
-                    <label>Status:</label>
-                    <select>
-                        <option value="select">Select from Drop Down</option>
-                        <option value="urgent">Urgent</option>
-                        <option value="normal">Normal</option>
-                        <option value="delayed">Delayed</option>
-                        <option value="finished">Finished</option>
-                    </select>
-
-                </li>
-            </ul>
-
-            <div id="taskLink"><b><a href="task_page.html">Tasks</a></b>
-                <br>
-                <ul>
-                    <li class="colorSelector">
-                        <select>
-                            <option value="color1" style="background: forestgreen"></option>
-                            <option value="color1" style="background: red"></option>
-                            <option value="color2" style="background: yellow"></option>
-                            <option value="color3" style="background: deepskyblue"></option>
-                        </select>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div id="projectname">
-            <ul>
-                <li>
-                    <label class="projectName">Project Name</label>
-                </li>
-                <li>
-                    <label class="description">Description</label>
-                </li>
-            </ul>
-            <br>
-            <ul class="dueDate">
-                <li>
-                    <label>Due Date:</label>
-                    <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
-                    <label class="reqs" id="date_req"></label>
-                </li>
-            </ul>
-            <ul class="status">
-                <li>
-                    <label>Status:</label>
-                    <select>
-                        <option value="select">Select from Drop Down</option>
-                        <option value="urgent">Urgent</option>
-                        <option value="normal">Normal</option>
-                        <option value="delayed">Delayed</option>
-                        <option value="finished">Finished</option>
-                    </select>
-
-                </li>
-            </ul>
-
-            <div id="taskLink"><b><a href="task_page.html">Tasks</a></b>
-                <br>
-                <ul>
-                    <li class="colorSelector">
-                        <select>
-                            <option value="color1" style="background: forestgreen"></option>
-                            <option value="color1" style="background: red"></option>
-                            <option value="color2" style="background: yellow"></option>
-                            <option value="color3" style="background: deepskyblue"></option>
-                        </select>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div id="projectname">
-            <ul>
-                <li>
-                    <label class="projectName">Project Name</label>
-                </li>
-                <li>
-                    <label class="description">Description</label>
-                </li>
-            </ul>
-            <br>
-            <ul class="dueDate">
-                <li>
-                    <label>Due Date:</label>
-                    <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
-                    <label class="reqs" id="date_req"></label>
-                </li>
-            </ul>
-            <ul class="status">
-                <li>
-                    <label>Status:</label>
+                    <label id="status">{{=status}}</label>
                     <select>
                         <option value="select">Select from Drop Down</option>
                         <option value="urgent">Urgent</option>
@@ -209,6 +73,74 @@
 
         <footer>Copyright 2014 | Jennifer Brown | Programming for Web Applications II | All Rights Reserved </footer>
 
+
+    </script>
+
+    <!-- repeatable html for new project window -->
+    <script type="text/template" id="template_project_view">
+
+        <header>
+            <img src="images/logo.png" alt="Eygenda Logo">
+            <h1>Eygenda</h1>
+            <h2></h2>
+
+            <div id="logout">
+                <a href="main.html">Logout</a>
+            </div>
+
+
+        </header>
+        <div id="projects">
+            <h3>Add A New Project</h3>
+        </div>
+
+        <div id="newProject">
+
+            <form id="projectform" name="projectform" method="post">
+                <ul>
+                    <li class="form">
+                        <label id="#project_name">{{=projectName}}</label>
+                        <input type="text" name="projectname" id="projectname" class="words required" placeholder=""/>
+                        <label class="reqs" id="projectname_req"></label>
+                        <span class="errors" id="projectname_error"></span>
+                    </li>
+                    <li class="form">
+                        <label id="desc_name">{{=description}}</label>
+                        <input type="desc" name="desc" id="description" class="words required" placeholder="Description"/>
+                        <label class="reqs" id="desc_req"></label>
+                        <span class="errors" id="desc_error"></span>
+                    </li>
+                    <li class="form">
+                        <label id="due_date">{{=dueDate}}</label>
+                        <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
+                        <label class="reqs" id="date_req"></label>
+                        <span class="errors" id="date_error"></span>
+                    </li>
+                    <li class="form">
+                        <label id="status">{{=status}}</label>
+
+                        <select>
+                            <option value="select">Select from Drop Down</option>
+                            <option value="urgent">Urgent</option>
+                            <option value="normal">Normal</option>
+                            <option value="delayed">Delayed</option>
+                            <option value="finished">Finished</option>
+                        </select>
+                    </li>
+
+                </ul>
+            </form>
+
+            <div id="newProjectBtns">
+                <button type="submit" value="Submit" id="cancel"><a href="project_page.html">Cancel</a></button>
+                <button type="submit" value="Submit" id="finish"><a href="project_page.html">Finish</a></button>
+            </div>
+
+        </div>
+
+
+
+        <footer>Copyright 2014 | Jennifer Brown | Programming for Web Applications II | All Rights Reserved </footer>
 
     </script>
 
@@ -276,141 +208,141 @@
                 </ul>
             </div>
         </div>
-        <div id="taskname">
-            <ul>
-                <li>
-                    <label class="taskName">Task Name</label>
-                </li>
-                <li>
-                    <label class="description">Description</label>
-                </li>
-            </ul>
-            <br>
-            <ul class="dueDate">
-                <li>
-                    <label>Due Date:</label>
-                    <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
-                    <label class="reqs" id="date_req"></label>
-                </li>
-            </ul>
-            <ul class="status">
-                <li>
-                    <label>Status:</label>
-                    <select>
-                        <option value="select">Select from Drop Down</option>
-                        <option value="urgent">Urgent</option>
-                        <option value="normal">Normal</option>
-                        <option value="delayed">Delayed</option>
-                        <option value="finished">Finished</option>
-                    </select>
+        <!--<div id="taskname">-->
+            <!--<ul>-->
+                <!--<li>-->
+                    <!--<label class="taskName">Task Name</label>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<label class="description">Description</label>-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!--<br>-->
+            <!--<ul class="dueDate">-->
+                <!--<li>-->
+                    <!--<label>Due Date:</label>-->
+                    <!--<input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>-->
+                    <!--<label class="reqs" id="date_req"></label>-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!--<ul class="status">-->
+                <!--<li>-->
+                    <!--<label>Status:</label>-->
+                    <!--<select>-->
+                        <!--<option value="select">Select from Drop Down</option>-->
+                        <!--<option value="urgent">Urgent</option>-->
+                        <!--<option value="normal">Normal</option>-->
+                        <!--<option value="delayed">Delayed</option>-->
+                        <!--<option value="finished">Finished</option>-->
+                    <!--</select>-->
 
-                </li>
-            </ul>
+                <!--</li>-->
+            <!--</ul>-->
 
-            <div id="taskLink"><a href="project_page.html">Back to Project</a>
-                <br>
-                <ul>
-                    <li class="colorSelector">
-                        <select>
-                            <option value="color1" style="background: forestgreen"></option>
-                            <option value="color1" style="background: red"></option>
-                            <option value="color2" style="background: yellow"></option>
-                            <option value="color3" style="background: deepskyblue"></option>
-                        </select>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div id="taskname">
-            <ul>
-                <li>
-                    <label class="taskName">Task Name</label>
-                </li>
-                <li>
-                    <label class="description">Description</label>
-                </li>
-            </ul>
-            <br>
-            <ul class="dueDate">
-                <li>
-                    <label>Due Date:</label>
-                    <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
-                    <label class="reqs" id="date_req"></label>
-                </li>
-            </ul>
-            <ul class="status">
-                <li>
-                    <label>Status:</label>
-                    <select>
-                        <option value="select">Select from Drop Down</option>
-                        <option value="urgent">Urgent</option>
-                        <option value="normal">Normal</option>
-                        <option value="delayed">Delayed</option>
-                        <option value="finished">Finished</option>
-                    </select>
+            <!--<div id="taskLink"><a href="project_page.html">Back to Project</a>-->
+                <!--<br>-->
+                <!--<ul>-->
+                    <!--<li class="colorSelector">-->
+                        <!--<select>-->
+                            <!--<option value="color1" style="background: forestgreen"></option>-->
+                            <!--<option value="color1" style="background: red"></option>-->
+                            <!--<option value="color2" style="background: yellow"></option>-->
+                            <!--<option value="color3" style="background: deepskyblue"></option>-->
+                        <!--</select>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div id="taskname">-->
+            <!--<ul>-->
+                <!--<li>-->
+                    <!--<label class="taskName">Task Name</label>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<label class="description">Description</label>-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!--<br>-->
+            <!--<ul class="dueDate">-->
+                <!--<li>-->
+                    <!--<label>Due Date:</label>-->
+                    <!--<input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>-->
+                    <!--<label class="reqs" id="date_req"></label>-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!--<ul class="status">-->
+                <!--<li>-->
+                    <!--<label>Status:</label>-->
+                    <!--<select>-->
+                        <!--<option value="select">Select from Drop Down</option>-->
+                        <!--<option value="urgent">Urgent</option>-->
+                        <!--<option value="normal">Normal</option>-->
+                        <!--<option value="delayed">Delayed</option>-->
+                        <!--<option value="finished">Finished</option>-->
+                    <!--</select>-->
 
-                </li>
-            </ul>
+                <!--</li>-->
+            <!--</ul>-->
 
-            <div id="taskLink"><a href="project_page.html">Back to Project</a>
-                <br>
-                <ul>
-                    <li class="colorSelector">
-                        <select>
-                            <option value="color1" style="background: forestgreen"></option>
-                            <option value="color1" style="background: red"></option>
-                            <option value="color2" style="background: yellow"></option>
-                            <option value="color3" style="background: deepskyblue"></option>
-                        </select>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div id="taskname">
-            <ul>
-                <li>
-                    <label class="taskName">Task Name</label>
-                </li>
-                <li>
-                    <label class="description">Description</label>
-                </li>
-            </ul>
-            <br>
-            <ul class="dueDate">
-                <li>
-                    <label>Due Date:</label>
-                    <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
-                    <label class="reqs" id="date_req"></label>
-                </li>
-            </ul>
-            <ul class="status">
-                <li>
-                    <label>Status:</label>
-                    <select>
-                        <option value="select">Select from Drop Down</option>
-                        <option value="urgent">Urgent</option>
-                        <option value="normal">Normal</option>
-                        <option value="delayed">Delayed</option>
-                        <option value="finished">Finished</option>
-                    </select>
+            <!--<div id="taskLink"><a href="project_page.html">Back to Project</a>-->
+                <!--<br>-->
+                <!--<ul>-->
+                    <!--<li class="colorSelector">-->
+                        <!--<select>-->
+                            <!--<option value="color1" style="background: forestgreen"></option>-->
+                            <!--<option value="color1" style="background: red"></option>-->
+                            <!--<option value="color2" style="background: yellow"></option>-->
+                            <!--<option value="color3" style="background: deepskyblue"></option>-->
+                        <!--</select>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div id="taskname">-->
+            <!--<ul>-->
+                <!--<li>-->
+                    <!--<label class="taskName">Task Name</label>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<label class="description">Description</label>-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!--<br>-->
+            <!--<ul class="dueDate">-->
+                <!--<li>-->
+                    <!--<label>Due Date:</label>-->
+                    <!--<input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>-->
+                    <!--<label class="reqs" id="date_req"></label>-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!--<ul class="status">-->
+                <!--<li>-->
+                    <!--<label>Status:</label>-->
+                    <!--<select>-->
+                        <!--<option value="select">Select from Drop Down</option>-->
+                        <!--<option value="urgent">Urgent</option>-->
+                        <!--<option value="normal">Normal</option>-->
+                        <!--<option value="delayed">Delayed</option>-->
+                        <!--<option value="finished">Finished</option>-->
+                    <!--</select>-->
 
-                </li>
-            </ul>
+                <!--</li>-->
+            <!--</ul>-->
 
-            <div id="taskLink"><a href="project_page.html">Back to Project</a>
-                <br>
-                <ul>
-                    <li class="colorSelector">
-                        <select>
-                            <option value="color1" style="background: forestgreen"></option>
-                            <option value="color1" style="background: red"></option>
-                            <option value="color2" style="background: yellow"></option>
-                            <option value="color3" style="background: deepskyblue"></option>
-                        </select>
-                    </li>
-                </ul>
-            </div>
-        </div>
+            <!--<div id="taskLink"><a href="project_page.html">Back to Project</a>-->
+                <!--<br>-->
+                <!--<ul>-->
+                    <!--<li class="colorSelector">-->
+                        <!--<select>-->
+                            <!--<option value="color1" style="background: forestgreen"></option>-->
+                            <!--<option value="color1" style="background: red"></option>-->
+                            <!--<option value="color2" style="background: yellow"></option>-->
+                            <!--<option value="color3" style="background: deepskyblue"></option>-->
+                        <!--</select>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
 
         <footer>Copyright 2014 | Jennifer Brown | Programming for Web Applications II | All Rights Reserved </footer>
 
@@ -485,77 +417,6 @@
 
     </script>
 
-    <!-- repeatable html for new project window -->
-    <script type="text/template" id="template_project_view">
-
-        <header>
-            <img src="images/logo.png" alt="Eygenda Logo">
-            <h1>Eygenda</h1>
-            <h2></h2>
-
-            <div id="logout">
-                <a href="main.html">Logout</a>
-            </div>
-
-
-        </header>
-        <div id="projects">
-            <h3>Add A New Project</h3>
-        </div>
-
-
-        <div id="newProject">
-
-
-
-            <form id="projectform" name="projectform" method="post">
-                <ul>
-                    <li class="form">
-                        <label>Project Name</label>
-                        <input type="text" name="projectname" id="projectname" class="words required" placeholder=""/>
-                        <label class="reqs" id="projectname_req"></label>
-                        <span class="errors" id="projectname_error"></span>
-                    </li>
-                    <li class="form">
-                        <label>Description Name</label>
-                        <input type="desc" name="desc" id="description" class="words required" placeholder="Description"/>
-                        <label class="reqs" id="desc_req"></label>
-                        <span class="errors" id="desc_error"></span>
-                    </li>
-                    <li class="form">
-                        <label>Due Date</label>
-                        <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
-                        <label class="reqs" id="date_req"></label>
-                        <span class="errors" id="date_error"></span>
-                    </li>
-                    <li class="form">
-                        <label>Project Status</label>
-
-                        <select>
-                            <option value="select">Select from Drop Down</option>
-                            <option value="urgent">Urgent</option>
-                            <option value="normal">Normal</option>
-                            <option value="delayed">Delayed</option>
-                            <option value="finished">Finished</option>
-                        </select>
-                    </li>
-
-                </ul>
-            </form>
-
-            <div id="newProjectBtns">
-                <button type="submit" value="Submit" id="cancel"><a href="project_page.html">Cancel</a></button>
-                <button type="submit" value="Submit" id="finish"><a href="project_page.html">Finish</a></button>
-            </div>
-
-        </div>
-
-
-
-        <footer>Copyright 2014 | Jennifer Brown | Programming for Web Applications II | All Rights Reserved </footer>
-
-    </script>
-
     <!-- repeatable html for registration page -->
     <script type="text/template" id="template_registration_view">
         <header>
@@ -570,14 +431,13 @@
                 <ul>
                     <li class="form">
 
-                        <input type="text" name="username" id="user" class="words required" placeholder="Username"/>
+                        <input type="text" name="username" id="user" class="words required" placeholder="Username" required/>
                         <label class="reqs" id="username_req"></label>
                         <span class="errors" id="username_error">Example: John Doe, Jane Doe</span>
                     </li>
                     <li class="form">
                         <input type="password" name="password" id="pass" class="password words required" placeholder="Password"/>
                         <label class="reqs" id="password_req"></label>
-                        <div id="pmeter"><div id="pbar"></div></div>
                         <span class="errors" id="password_error"></span>
                     </li>
                     <li class="form">
@@ -585,11 +445,6 @@
                         <label class="reqs" id="email_req"></label>
                         <span class="errors" id="email_error">Example: user@domain.com</span>
                     </li>
-                    <!--<li class="form">-->
-                        <!--<input type="text" name="phone" id="phone" class="phone" placeholder="Phone Number"/>-->
-                        <!--<label class="reqs" id="phone_req"></label>-->
-                        <!--<span class="errors" id="phone_error">Must match this format: (123)456-7890</span>-->
-                    <!--</li>-->
 
                 </ul>
 
