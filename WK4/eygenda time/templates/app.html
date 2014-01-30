@@ -7,7 +7,7 @@
 
 <div>
 
-    <!-- core application skeleton html/Display after Login/Registration -->
+    <!-- core application skeleton html/Display after Login/Registration/Home Page of Application -->
     <script type="text/template" id="template_app">
         <header>
             <img src="images/logo.png" alt="Eygenda Logo">
@@ -99,32 +99,32 @@
             <form id="projectform" name="projectform" method="post">
                 <ul>
                     <li class="form">
-                        <label id="#project_name">{{=projectName}}</label>
-                        <input type="text" name="projectname" id="projectname" class="words required" placeholder=""/>
+                        <label id="#proj_name">Project Name</label>
+                        <input type="text" name="projectname" id="proj_name" class="words required" placeholder="Name for your project goes here"/>
                         <label class="reqs" id="projectname_req"></label>
                         <span class="errors" id="projectname_error"></span>
                     </li>
                     <li class="form">
-                        <label id="desc_name">{{=description}}</label>
-                        <input type="desc" name="desc" id="description" class="words required" placeholder="Description"/>
+                        <label id="desc_name">Description</label>
+                        <input type="desc" name="desc" id="description" class="words required" placeholder="Place a short description of your task here"/>
                         <label class="reqs" id="desc_req"></label>
                         <span class="errors" id="desc_error"></span>
                     </li>
                     <li class="form">
-                        <label id="due_date">{{=dueDate}}</label>
+                        <label id="due_date">Due Date:</label>
                         <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
                         <label class="reqs" id="date_req"></label>
                         <span class="errors" id="date_error"></span>
                     </li>
                     <li class="form">
-                        <label id="status">{{=status}}</label>
+                        <label id="status">Status:</label>
 
                         <select>
-                            <option value="select">Select from Drop Down</option>
-                            <option value="urgent">Urgent</option>
-                            <option value="normal">Normal</option>
-                            <option value="delayed">Delayed</option>
-                            <option value="finished">Finished</option>
+                            <option>Select from Drop Down</option>
+                            <option>Urgent</option>
+                            <option>Normal</option>
+                            <option>Delayed</option>
+                            <option>Finished</option>
                         </select>
                     </li>
 
@@ -132,8 +132,8 @@
             </form>
 
             <div id="newProjectBtns">
-                <button type="submit" value="Submit" id="cancel"><a href="project_page.html">Cancel</a></button>
-                <button type="submit" value="Submit" id="finish"><a href="project_page.html">Finish</a></button>
+                <button type="submit" value="Submit" id="cancel">Cancel</button>
+                <button type="submit" value="Submit" id="finish">Finish</button>
             </div>
 
         </div>
@@ -166,23 +166,23 @@
         <div id="taskname">
             <ul>
                 <li>
-                    <label class="taskName">Task Name</label>
+                    <label class="taskName">{{=name}}</label>
                 </li>
                 <li>
-                    <label class="description">Description</label>
+                    <label class="description">{{=description}}</label>
                 </li>
             </ul>
             <br>
             <ul class="dueDate">
                 <li>
-                    <label>Due Date:</label>
+                    <label id="dueDate">{{=dueDate}}</label>
                     <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
                     <label class="reqs" id="date_req"></label>
                 </li>
             </ul>
             <ul class="status">
                 <li>
-                    <label>Status:</label>
+                    <label id="status">Status:</label>
                     <select>
                         <option value="select">Select from Drop Down</option>
                         <option value="urgent">Urgent</option>
@@ -208,141 +208,6 @@
                 </ul>
             </div>
         </div>
-        <!--<div id="taskname">-->
-            <!--<ul>-->
-                <!--<li>-->
-                    <!--<label class="taskName">Task Name</label>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<label class="description">Description</label>-->
-                <!--</li>-->
-            <!--</ul>-->
-            <!--<br>-->
-            <!--<ul class="dueDate">-->
-                <!--<li>-->
-                    <!--<label>Due Date:</label>-->
-                    <!--<input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>-->
-                    <!--<label class="reqs" id="date_req"></label>-->
-                <!--</li>-->
-            <!--</ul>-->
-            <!--<ul class="status">-->
-                <!--<li>-->
-                    <!--<label>Status:</label>-->
-                    <!--<select>-->
-                        <!--<option value="select">Select from Drop Down</option>-->
-                        <!--<option value="urgent">Urgent</option>-->
-                        <!--<option value="normal">Normal</option>-->
-                        <!--<option value="delayed">Delayed</option>-->
-                        <!--<option value="finished">Finished</option>-->
-                    <!--</select>-->
-
-                <!--</li>-->
-            <!--</ul>-->
-
-            <!--<div id="taskLink"><a href="project_page.html">Back to Project</a>-->
-                <!--<br>-->
-                <!--<ul>-->
-                    <!--<li class="colorSelector">-->
-                        <!--<select>-->
-                            <!--<option value="color1" style="background: forestgreen"></option>-->
-                            <!--<option value="color1" style="background: red"></option>-->
-                            <!--<option value="color2" style="background: yellow"></option>-->
-                            <!--<option value="color3" style="background: deepskyblue"></option>-->
-                        <!--</select>-->
-                    <!--</li>-->
-                <!--</ul>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div id="taskname">-->
-            <!--<ul>-->
-                <!--<li>-->
-                    <!--<label class="taskName">Task Name</label>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<label class="description">Description</label>-->
-                <!--</li>-->
-            <!--</ul>-->
-            <!--<br>-->
-            <!--<ul class="dueDate">-->
-                <!--<li>-->
-                    <!--<label>Due Date:</label>-->
-                    <!--<input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>-->
-                    <!--<label class="reqs" id="date_req"></label>-->
-                <!--</li>-->
-            <!--</ul>-->
-            <!--<ul class="status">-->
-                <!--<li>-->
-                    <!--<label>Status:</label>-->
-                    <!--<select>-->
-                        <!--<option value="select">Select from Drop Down</option>-->
-                        <!--<option value="urgent">Urgent</option>-->
-                        <!--<option value="normal">Normal</option>-->
-                        <!--<option value="delayed">Delayed</option>-->
-                        <!--<option value="finished">Finished</option>-->
-                    <!--</select>-->
-
-                <!--</li>-->
-            <!--</ul>-->
-
-            <!--<div id="taskLink"><a href="project_page.html">Back to Project</a>-->
-                <!--<br>-->
-                <!--<ul>-->
-                    <!--<li class="colorSelector">-->
-                        <!--<select>-->
-                            <!--<option value="color1" style="background: forestgreen"></option>-->
-                            <!--<option value="color1" style="background: red"></option>-->
-                            <!--<option value="color2" style="background: yellow"></option>-->
-                            <!--<option value="color3" style="background: deepskyblue"></option>-->
-                        <!--</select>-->
-                    <!--</li>-->
-                <!--</ul>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div id="taskname">-->
-            <!--<ul>-->
-                <!--<li>-->
-                    <!--<label class="taskName">Task Name</label>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<label class="description">Description</label>-->
-                <!--</li>-->
-            <!--</ul>-->
-            <!--<br>-->
-            <!--<ul class="dueDate">-->
-                <!--<li>-->
-                    <!--<label>Due Date:</label>-->
-                    <!--<input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>-->
-                    <!--<label class="reqs" id="date_req"></label>-->
-                <!--</li>-->
-            <!--</ul>-->
-            <!--<ul class="status">-->
-                <!--<li>-->
-                    <!--<label>Status:</label>-->
-                    <!--<select>-->
-                        <!--<option value="select">Select from Drop Down</option>-->
-                        <!--<option value="urgent">Urgent</option>-->
-                        <!--<option value="normal">Normal</option>-->
-                        <!--<option value="delayed">Delayed</option>-->
-                        <!--<option value="finished">Finished</option>-->
-                    <!--</select>-->
-
-                <!--</li>-->
-            <!--</ul>-->
-
-            <!--<div id="taskLink"><a href="project_page.html">Back to Project</a>-->
-                <!--<br>-->
-                <!--<ul>-->
-                    <!--<li class="colorSelector">-->
-                        <!--<select>-->
-                            <!--<option value="color1" style="background: forestgreen"></option>-->
-                            <!--<option value="color1" style="background: red"></option>-->
-                            <!--<option value="color2" style="background: yellow"></option>-->
-                            <!--<option value="color3" style="background: deepskyblue"></option>-->
-                        <!--</select>-->
-                    <!--</li>-->
-                <!--</ul>-->
-            <!--</div>-->
-        <!--</div>-->
 
         <footer>Copyright 2014 | Jennifer Brown | Programming for Web Applications II | All Rights Reserved </footer>
 
@@ -371,19 +236,19 @@
             <form id="taskform" name="taskform" method="post">
                 <ul>
                     <li class="form">
-                        <label>Task Name</label>
+                        <label id="task_name">{{=taskName}}</label>
                         <input type="text" name="taskname" id="taskname" class="words required" placeholder=""/>
                         <label class="reqs" id="taskname_req"></label>
                         <span class="errors" id="taskname_error"></span>
                     </li>
                     <li class="form">
-                        <label>Description Name</label>
+                        <label id="description">{{=description}}</label>
                         <input type="desc" name="desc" id="description" class="words required" placeholder="Description"/>
                         <label class="reqs" id="desc_req"></label>
                         <span class="errors" id="desc_error"></span>
                     </li>
                     <li class="form">
-                        <label>Due Date</label>
+                        <label id="dueDate">{{=dueDate}}</label>
                         <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
                         <label class="reqs" id="date_req"></label>
                         <span class="errors" id="date_error"></span>
@@ -406,8 +271,8 @@
             </form>
 
             <div id="newTaskBtns">
-                <button type="submit" value="Submit" id="cancel"><a href="task_page.html">Cancel</a></button>
-                <button type="submit" value="Submit" id="finish"><a href="task_page.html">Finish</a> </button>
+                <button type="submit" value="Submit" id="cancel">Cancel<button>
+                <button type="submit" value="Submit" id="finish">Finish</button>
             </div>
 
         </div>
