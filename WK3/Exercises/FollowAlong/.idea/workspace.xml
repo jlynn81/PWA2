@@ -26,7 +26,7 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="1040">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="64" max-vertical-offset="1040">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -34,19 +34,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Activity-5-1.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Activity-5-1.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Activity-5-1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="688">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="688">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="languages.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="languages.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/languages.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="6" selection-start="206" selection-end="206" vertical-scroll-proportion="-5.12" vertical-offset="0" max-vertical-offset="224">
+            <state line="8" column="6" selection-start="206" selection-end="206" vertical-scroll-proportion="0.18470418" vertical-offset="0" max-vertical-offset="693">
               <folding>
                 <marker date="1374165122000" expanded="true" signature="79:186" placeholder="..." />
               </folding>
@@ -62,8 +62,8 @@
     </FindUsagesManager>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="3067" />
-    <option name="y" value="27" />
+    <option name="x" value="259" />
+    <option name="y" value="94" />
     <option name="width" value="687" />
     <option name="height" value="815" />
   </component>
@@ -200,14 +200,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="3067" y="27" width="687" height="815" extended-state="1" />
+    <frame x="259" y="94" width="687" height="815" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3243243" sideWeight="0.5" order="-1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31441048" sideWeight="0.5" order="-1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -232,28 +232,28 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/languages.html">
+    <entry file="file://$PROJECT_DIR$/Activity-5-1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="6" selection-start="206" selection-end="206" vertical-scroll-proportion="-5.12" vertical-offset="0" max-vertical-offset="224">
-          <folding>
-            <marker date="1374165122000" expanded="true" signature="79:186" placeholder="..." />
-          </folding>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="688">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="1040">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="64" max-vertical-offset="1040">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Activity-5-1.html">
+    <entry file="file://$PROJECT_DIR$/templates/languages.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="688">
-          <folding />
+        <state line="8" column="6" selection-start="206" selection-end="206" vertical-scroll-proportion="0.18470418" vertical-offset="0" max-vertical-offset="693">
+          <folding>
+            <marker date="1374165122000" expanded="true" signature="79:186" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

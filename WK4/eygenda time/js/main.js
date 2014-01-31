@@ -32,19 +32,18 @@
 			container.html(appCode);
 			
 
-
 			//Navigation Click Events
-			$('#logout').on('click', logout);
-			//$('#p-link').on('click', loadApp);
-            $('#add_project_btn').on('click', newProject); //***NEEDS TO MOVE SOMEWHERE ELSE!!!!
-//            $('#cancel').on('click', newProject);
+			$('#logout').on('click', logout);   //logs out the current user from the app
 
+            $('#add_project_btn').on('click', loadNewProjects); //allows the user the add a project
+
+            $('#taskLink').on('click', tasks); //loads Current Tasks associated with that Project
 
 		});
 		return false;
 	};
 	
-	//Loads the Landing/Home page of the Manager
+	//Loads the Landing/Home page of the Manager/ Lists out User Current Projects
 	var loadLanding = function(){
 		console.log('test');
 		$.get('templates/landing.html', function(html){
@@ -54,8 +53,8 @@
 			$.render(currentUser, 'landing');		// use template
 			container.html(landingCode);
 
-			$('#login_btn').on('click', login);
-			$('#reg_btn').on('click', loadRegForm);
+			$('#login_btn').on('click', login);     //logs in the user
+			$('#reg_btn').on('click', loadRegForm); //loads the registration form for a new user
 
 
 		});
@@ -79,7 +78,7 @@
 		});
 	};
 
-
+    //allows a registered user to log in and provides errors when a field is left empty
     var login = function(){
     	var user = $('#username').val();
 		var pass = $('#password').val();
@@ -95,7 +94,8 @@
             dataType: 'json',
             success: function(response){
                 if(response.error){
-                    $('#registration .err_msg').text(response.error);
+                    $('#registration').find('.err_msg').text(response.error);
+                    console.log(response.error);
                 }else{
                     loadApp();
                 }
@@ -104,7 +104,7 @@
         })
     };
 
-    //Loads the Registration Page
+    ////// Loads Registration Page
 
     var loadRegForm = function(){
 	
@@ -115,16 +115,14 @@
 			$.render(currentUser, 'reg');		// use template
 			container.html(regCode);
 
-            $('#submit_btn').on('click', register);
+            $('#submit_btn').on('click', register); //Loads the registration template view
 		}); 
 		return false;
 	};
 
-
-	
 	////// Register New User //////
 
-	var register = function(){
+	var register = function(){      //registration form with error response
 
 		var user = $('#user').val(),
 			email = $('#email').val(),
@@ -142,7 +140,7 @@
 				dataType: 'json',
 				success: function(response){
 					if(response.error){
-						$('#registration .err_msg').text(response.error);
+						$('#registration').find('.err_msg').text(response.error);
                         console.log(response.error);
 					}else{
                         loadApp();
@@ -153,7 +151,7 @@
 			return false;
 	};
 
-    //Adding a New Project to the Manager
+    ////// Adding a New Project to the Manager
 
     var loadNewProjects = function(){
 
@@ -164,18 +162,19 @@
             $.render(currentUser, 'newProj');   //uses the template
             container.html(projectCode);
 
-
-            $('#finish').on('click', newProject);
+            $('#finish').on('click', newProject);   //Allows User to Finish Adding a Project
+            $('#cancel').on('click', loadApp);      //Allows user to cancel out of creating a new project
 
         });
         return false;
     };
 
+    ////// New Project Creation Form
     var newProject = function(){
-        var projName = $('#project_name').val();
+        var projName = $('#project').val();
         var descName = $('#description').val();
-        var date = $('#due_date').val();
-        var status = $('#status option').val();
+        var date = $('#date').val();
+        var status = $('#status').find('option').val();
 
         console.log('test');
         $.ajax({
@@ -190,7 +189,7 @@
             dataType: 'json',
             success: function(response){
                 if(response.error){
-                    $('').text(response.error);
+                    $('#projectform').find('.err_msg').text(response.error);
                     console.log(response.error);
                 }else{
                     loadNewProjects();
@@ -201,8 +200,26 @@
         return false;
     };
 
-    //Add a New Task to Project
-    var loadNewTask = function(){
+    ////// Loads the Current Tasks Page
+    var loadTasks = function(){
+
+        $.get('templates/app.html', function(html){
+            var p = $(html);
+            var taskPage = p.find('#template_task').html();
+            $.template('currentTasks', taskPage);   //compiles the template
+            $.render(currentUser, 'currentTasks');  //uses the template
+            container.html(taskPage);
+
+            $('#add_task_btn').on('click', loadNewTasks);   //Allows a User to Create a New Task
+            $('#back_btn').on('click', loadApp);            //Gets the User back to the Project page
+            console.log('test');
+        });
+        return false;
+    };
+
+    //Loads the New Task Page for task creation
+    var loadNewTasks = function(){
+
         $.get('template/app.html', function(html){
             var t = $(html);
             var taskCode = t.find('#template_task_view').html();
@@ -210,21 +227,44 @@
             $.render(currentUser, 'newTask');   //uses the template
             container.html(taskCode);
 
-        });
+            $('#finish').on('click', newTask);  //Allows the new User to Add the Task once form is filled in
+            $('#cancel').on('click', loadTasks);    //Allows User to cancel creation of task
 
+
+        });
+        return false;
     };
 
+    //Add New Task Form
     var newTask = function(){
+        var taskName = $('#taskname').val();
+        var taskDesc = $('#description').val();
+        var date = $('#date').val();
+        var status = $('#status').find('option').val();
+
+        console.log('test');
         $.ajax({
             url: 'xhr/new_task.php',
+            data: {
+                task: taskName,
+                description: taskDesc,
+                date: date,
+                status: status
+            },
             type: 'post',
             dataType: 'json',
             success: function(response){
-                loadNewTask();
+                if(response.error){
+                    $('#taskform').find('.err_msg').text(response.error);
+                }else{
+                    loadTasks();
+                }
             }
         });
         return false;
     };
+
+
 	
 	
 
@@ -253,7 +293,8 @@
 	==================================== END EVENTS 
 	===============================================
 	*/
-		
+
+    //Does the Log Out function for the entire application
 	var logout = function(){
 	
 		$.ajax({
@@ -266,6 +307,22 @@
 		});
 		return false;
 	};
+
+    //Used to link the Tasks to the template_task page
+    var tasks = function(){
+        $.ajax({
+            url: 'xhr/get_tasks.php',
+            type: 'get',
+            dataType: 'json',
+            success: function(response){
+                loadTasks();
+            }
+
+        });
+        return false;
+    };
+
+
 
 
 

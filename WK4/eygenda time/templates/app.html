@@ -5,6 +5,7 @@
 	Create a separate template for any repeatable components
 -->
 
+<!--suppress HtmlUnknownTarget -->
 <div>
 
     <!-- core application skeleton html/Display after Login/Registration/Home Page of Application -->
@@ -56,8 +57,8 @@
                 </li>
             </ul>
 
-            <div id="taskLink"><b><a href="task_page.html">Tasks</a></b>
-                <br>
+            <div id="taskLink"><a href="task_page.html">Tasks</a></div>
+            <div id="colorPicker">
                 <ul>
                     <li class="colorSelector">
                         <select>
@@ -69,7 +70,9 @@
                     </li>
                 </ul>
             </div>
+
         </div>
+
 
         <footer>Copyright 2014 | Jennifer Brown | Programming for Web Applications II | All Rights Reserved </footer>
 
@@ -99,8 +102,8 @@
             <form id="projectform" name="projectform" method="post">
                 <ul>
                     <li class="form">
-                        <label id="#proj_name">Project Name</label>
-                        <input type="text" name="projectname" id="proj_name" class="words required" placeholder="Name for your project goes here"/>
+                        <label id="proj_name">Project Name</label>
+                        <input type="text" name="projectname" id="project" class="words required" placeholder="Name for your project goes here"/>
                         <label class="reqs" id="projectname_req"></label>
                         <span class="errors" id="projectname_error"></span>
                     </li>
@@ -117,9 +120,9 @@
                         <span class="errors" id="date_error"></span>
                     </li>
                     <li class="form">
-                        <label id="status">Status:</label>
+                        <label>Status:</label>
 
-                        <select>
+                        <select id="status">
                             <option>Select from Drop Down</option>
                             <option>Urgent</option>
                             <option>Normal</option>
@@ -144,8 +147,8 @@
 
     </script>
 
-    <!-- repeatable html for task menu page -->
-    <script type="text/template" id="template_task_link">
+    <!-- repeatable html for task menu page/Loads Current Tasks for Project -->
+    <script type="text/template" id="template_task">
         <header>
             <img src="images/logo.png" alt="Eygenda Logo">
             <h1>Eygenda</h1>
@@ -159,14 +162,14 @@
 
         <div id="tasks">
             <h3>Current Tasks</h3>
-            <button type="submit" value="Submit">Add Task</button>
+            <button id="add_task_btn" type="submit" value="Submit">Add Task</button>
         </div>
 
 
         <div id="taskname">
             <ul>
                 <li>
-                    <label class="taskName">{{=name}}</label>
+                    <label class="taskName">{{=taskname}}</label>
                 </li>
                 <li>
                     <label class="description">{{=description}}</label>
@@ -194,19 +197,19 @@
                 </li>
             </ul>
 
-            <div id="taskLink"><a href="project_page.html">Back to Project</a>
-                <br>
-                <ul>
-                    <li class="colorSelector">
-                        <select>
-                            <option value="color1" style="background: forestgreen"></option>
-                            <option value="color1" style="background: red"></option>
-                            <option value="color2" style="background: yellow"></option>
-                            <option value="color3" style="background: deepskyblue"></option>
-                        </select>
-                    </li>
-                </ul>
-            </div>
+            <div id="back_btn"><a href="project_page.html">Back to Current Projects</a></div>
+                <div id="colorPicker">
+                    <ul>
+                        <li class="colorSelector">
+                            <select>
+                                <option value="color1" style="background: forestgreen"></option>
+                                <option value="color1" style="background: red"></option>
+                                <option value="color2" style="background: yellow"></option>
+                                <option value="color3" style="background: deepskyblue"></option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
         </div>
 
         <footer>Copyright 2014 | Jennifer Brown | Programming for Web Applications II | All Rights Reserved </footer>
@@ -236,27 +239,27 @@
             <form id="taskform" name="taskform" method="post">
                 <ul>
                     <li class="form">
-                        <label id="task_name">{{=taskName}}</label>
+                        <label id="task_name">Task Name</label>
                         <input type="text" name="taskname" id="taskname" class="words required" placeholder=""/>
                         <label class="reqs" id="taskname_req"></label>
                         <span class="errors" id="taskname_error"></span>
                     </li>
                     <li class="form">
-                        <label id="description">{{=description}}</label>
+                        <label id="description">Description</label>
                         <input type="desc" name="desc" id="description" class="words required" placeholder="Description"/>
                         <label class="reqs" id="desc_req"></label>
                         <span class="errors" id="desc_error"></span>
                     </li>
                     <li class="form">
-                        <label id="dueDate">{{=dueDate}}</label>
+                        <label id="dueDate">Due Date:</label>
                         <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
                         <label class="reqs" id="date_req"></label>
                         <span class="errors" id="date_error"></span>
                     </li>
                     <li class="form">
-                        <label>Project Status</label>
+                        <label>Status</label>
 
-                        <select>
+                        <select id="status">
                             <option value="select">Select from Drop Down</option>
                             <option value="urgent">Urgent</option>
                             <option value="normal">Normal</option>
@@ -270,7 +273,7 @@
 
             </form>
 
-            <div id="newTaskBtns">
+            <div id="add_tasks_btn">
                 <button type="submit" value="Submit" id="cancel">Cancel<button>
                 <button type="submit" value="Submit" id="finish">Finish</button>
             </div>

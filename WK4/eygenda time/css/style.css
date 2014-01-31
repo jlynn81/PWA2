@@ -125,7 +125,6 @@ button {
     color: #243e73;
     font-size: 15pt;
     font-family: 'Ledger', serif;
-    text-decoration: none;
     vertical-align: middle;
 }
 button:hover {
@@ -138,11 +137,15 @@ button:active {
     background: #f2e6a7;
 }
 
-a:link{ color: #0D1726;
+a:link{ color: #000000;
 }
-a:visited{ color: #d99873}
+a:visited{ color: #d99873;
+}
 
-a:hover{ color: #284370}
+a:hover{ color: #91B7D9;
+}
+
+#logout a:hover{ color: #243E73;}
 
 /*Registration Page CSS */
 #registration{
@@ -176,7 +179,7 @@ a:hover{ color: #284370}
     border-radius: 5px;
     background-color: #91B7D9;
     color: #000000;
-    font-family: 'Ledger', 'serif';
+    font-family: 'Ledger', serif;
     font-size: 10pt;
     width: 250px;
 }
@@ -232,7 +235,7 @@ a:hover{ color: #284370}
 
 #newProject, #newTasks{
     width: 929px; height: 297px;
-    margin: 30px 0px 25px 0px;
+    margin: 30px 0 25px 0;
     padding-top: 10px;
     background: #243e73;
     border-color: #4E74A6;
@@ -245,7 +248,7 @@ a:hover{ color: #284370}
 }
 
 #projects h3, #tasks h3{
-    margin: 20px 0px 0px 20px;
+    margin: 20px 0 0 20px;
     color: #243e73;
     text-shadow: 1px 1px 1px #B1C2D6;
 }
@@ -313,7 +316,7 @@ a:hover{ color: #284370}
 }
 #projectname .dueDate, #taskname .dueDate{
     font-size: 12pt;
-    margin: -100px 0px 5px 300px;
+    margin: -100px 0 5px 300px;
     padding: 5px;
 }
 #projectname .dueDate input, #projectname .status input, #taskname .dueDate input, #taskname .status input{
@@ -325,11 +328,11 @@ a:hover{ color: #284370}
 
 #projectname .status, #taskname .status{
     font-size: 12pt;
-    margin: -40px 0px 5px 300px;
+    margin: -40px 0 5px 300px;
     padding: 5px;
 }
 
-#taskLink{
+#taskLink, #back_btn{
     width: 150px;
     height: 45px;
     text-align: center;
@@ -337,7 +340,10 @@ a:hover{ color: #284370}
     margin-top: -100px;
     padding: 5px;
 }
-.colorSelector{
+#colorPicker{
+    height: 50px;
+    width: 100px;
+    margin-top: -25px;
     float: right;
 }
 
