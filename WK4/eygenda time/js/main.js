@@ -180,9 +180,9 @@
         $.ajax({
             url: 'xhr/new_project.php',
             data: {
-                project: projName,
-                description: descName,
-                date: date,
+                projectName: projName,
+                projectDescription: descName,
+                dueDate: date,
                 status: status
             },
             type: 'post',
@@ -246,9 +246,9 @@
         $.ajax({
             url: 'xhr/new_task.php',
             data: {
-                task: taskName,
-                description: taskDesc,
-                date: date,
+                taskName: taskName,
+                taskDescription: taskDesc,
+                dueDate: date,
                 status: status
             },
             type: 'post',
