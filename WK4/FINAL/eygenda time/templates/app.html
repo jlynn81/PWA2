@@ -24,6 +24,7 @@
         <div id="projects">
             <h3>Current Projects</h3>
             <button id="add_project_btn" type="submit" value="Submit">Add Project</button>
+            <button id="edit_Project_btn" type="submit" value="submit">Edit Project</button>
         </div>
 
         <div id="projectname">
@@ -58,14 +59,15 @@
             </ul>
 
             <div id="taskLink"><a href="task_page.html">Tasks</a></div>
+
             <div id="colorPicker">
                 <ul>
                     <li class="colorSelector">
                         <select>
                             <option value="color1" style="background: forestgreen"></option>
-                            <option value="color1" style="background: red"></option>
-                            <option value="color2" style="background: yellow"></option>
-                            <option value="color3" style="background: deepskyblue"></option>
+                            <option value="color2" style="background: red"></option>
+                            <option value="color3" style="background: yellow"></option>
+                            <option value="color4" style="background: deepskyblue"></option>
                         </select>
                     </li>
                 </ul>
@@ -163,8 +165,9 @@
         <div id="tasks">
             <h3>Current Tasks</h3>
             <button id="add_task_btn" type="submit" value="Submit">Add Task</button>
-        </div>
 
+        </div>
+        <button id="edit_task_btn" type="submit" value="submit">Edit Task</button>
 
         <div id="taskname">
             <ul>
@@ -178,7 +181,7 @@
             <br>
             <ul class="dueDate">
                 <li>
-                    <label id="dueDate">{{=dueDate}}</label>
+                    <label id="due_date">{{=dueDate}}</label>
                     <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
                     <label class="reqs" id="date_req"></label>
                 </li>
@@ -210,6 +213,7 @@
                         </li>
                     </ul>
                 </div>
+
         </div>
 
         <footer>Copyright 2014 | Jennifer Brown | Programming for Web Applications II | All Rights Reserved </footer>
@@ -240,24 +244,24 @@
                 <ul>
                     <li class="form">
                         <label id="task_name">Task Name</label>
-                        <input type="text" name="taskname" id="taskname" class="words required" placeholder=""/>
+                        <input type="text" name="taskname" id="task" class="words required" placeholder="Please insert a short task name"/>
                         <label class="reqs" id="taskname_req"></label>
                         <span class="errors" id="taskname_error"></span>
                     </li>
                     <li class="form">
                         <label id="description">Description</label>
-                        <input type="desc" name="desc" id="description" class="words required" placeholder="Description"/>
+                        <input type="desc" name="desc" id="description" class="words required" placeholder="Insert short description for current task"/>
                         <label class="reqs" id="desc_req"></label>
                         <span class="errors" id="desc_error"></span>
                     </li>
                     <li class="form">
                         <label id="dueDate">Due Date:</label>
-                        <input type="date" name="date" id="date" class="required date" placeholder="MM/DD/YYYY"/>
+                        <input type="date" name="date" id="date" class="required date" placeholder="Insert Date in following format MM/DD/YYYY"/>
                         <label class="reqs" id="date_req"></label>
                         <span class="errors" id="date_error"></span>
                     </li>
                     <li class="form">
-                        <label>Status</label>
+                        <label>Status:</label>
 
                         <select id="status">
                             <option value="select">Select from Drop Down</option>
@@ -274,7 +278,7 @@
             </form>
 
             <div id="add_tasks_btn">
-                <button type="submit" value="Submit" id="cancel">Cancel<button>
+                <button type="submit" value="Submit" id="cancel">Cancel</button>
                 <button type="submit" value="Submit" id="finish">Finish</button>
             </div>
 
@@ -306,7 +310,7 @@
                     <li class="form">
                         <input type="password" name="password" id="pass" class="password words required" placeholder="Password"/>
                         <label class="reqs" id="password_req"></label>
-                        <span class="errors" id="password_error"></span>
+                        <span class="errors" id="password_error">Upper and lowercase letters</span>
                     </li>
                     <li class="form">
                         <input type="text" name="email" id="email" class="required email" placeholder="Email Address"/>

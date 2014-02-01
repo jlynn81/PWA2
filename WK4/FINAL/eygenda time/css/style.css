@@ -1,5 +1,5 @@
 
-body{
+html{
     background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(242,230,167,0) 100%);/* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(242,230,167,0))); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(242,230,167,0) 100%); /* Chrome10+,Safari5.1+ */
@@ -8,6 +8,8 @@ body{
     border-radius: 1.25%;
     border-width: 2em;
     font-family: 'Ledger', serif;
+    margin: 0 auto;
+    padding: 1.875%;
 }
 
 header{
@@ -188,7 +190,7 @@ a:hover{ color: #91B7D9;
     list-style: none;
 }
 
-#newProject ul li{
+#newProject ul li, #newTasks ul li{
     padding: 5px;
 }
 
@@ -340,6 +342,11 @@ a:hover{ color: #91B7D9;
     margin-top: -100px;
     padding: 5px;
 }
+
+#taskEdit .editTask, #taskEdit .deleteTask{
+    display: inline;
+}
+
 #colorPicker{
     height: 50px;
     width: 100px;

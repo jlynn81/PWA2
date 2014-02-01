@@ -13,7 +13,8 @@
 	var win = $(window),
 		body = $(document.body),
 		container = $('#container'),	// the only element in index.html
-		currentUser = {}
+		currentUser = {},
+        currentInfo = {}
 	;
 	
 	
@@ -37,7 +38,8 @@
 
             $('#add_project_btn').on('click', loadNewProjects); //allows the user the add a project
 
-            $('#taskLink').on('click', tasks); //loads Current Tasks associated with that Project
+            $('#taskLink').on('click', getTasks); //loads Current Tasks associated with that Project
+
 
 		});
 		return false;
@@ -81,14 +83,17 @@
     //allows a registered user to log in and provides errors when a field is left empty
     var login = function(){
     	var user = $('#username').val();
-		var pass = $('#password').val();
+		var password = $('#password').val();
+
+        var pattern;
+        var pass;
 
     	console.log('test');
         $.ajax({
             url: 'xhr/login.php',
             data: {
                 username: user,
-				password: pass 
+				password: password
             },
             type: 'post',
             dataType: 'json',
@@ -101,7 +106,7 @@
                 }
             }
 
-        })
+        });
     };
 
     ////// Loads Registration Page
@@ -171,7 +176,7 @@
 
     ////// New Project Creation Form
     var newProject = function(){
-        var projName = $('#project').val();
+        var projName = $('.projectName').val();
         var descName = $('#description').val();
         var date = $('#date').val();
         var status = $('#status').find('option').val();
@@ -189,7 +194,7 @@
             dataType: 'json',
             success: function(response){
                 if(response.error){
-                    $('#projectform').find('.err_msg').text(response.error);
+                    $('.projectName').find('.err_msg').text(response.error);
                     console.log(response.error);
                 }else{
                     loadNewProjects();
@@ -201,17 +206,19 @@
     };
 
     ////// Loads the Current Tasks Page
-    var loadTasks = function(){
+    var loadTaskPage = function(){
 
         $.get('templates/app.html', function(html){
             var p = $(html);
-            var taskPage = p.find('#template_task').html();
-            $.template('currentTasks', taskPage);   //compiles the template
-            $.render(currentUser, 'currentTasks');  //uses the template
-            container.html(taskPage);
+            var taskCode = p.find('#template_task').html();
+            $.template('task', taskCode);   //compiles the template
+            $.render(currentUser, 'task');  //uses the template
+            container.html(taskCode);
 
             $('#add_task_btn').on('click', loadNewTasks);   //Allows a User to Create a New Task
+            console.log('click');
             $('#back_btn').on('click', loadApp);            //Gets the User back to the Project page
+
             console.log('test');
         });
         return false;
@@ -220,7 +227,7 @@
     //Loads the New Task Page for task creation
     var loadNewTasks = function(){
 
-        $.get('template/app.html', function(html){
+        $.get('templates/app.html', function(html){
             var t = $(html);
             var taskCode = t.find('#template_task_view').html();
             $.template('newTask', taskCode);    //compiles the template
@@ -228,7 +235,7 @@
             container.html(taskCode);
 
             $('#finish').on('click', newTask);  //Allows the new User to Add the Task once form is filled in
-            $('#cancel').on('click', loadTasks);    //Allows User to cancel creation of task
+            $('#cancel').on('click', loadTaskPage);    //Allows User to cancel creation of task
 
 
         });
@@ -241,11 +248,13 @@
         var taskDesc = $('#description').val();
         var date = $('#date').val();
         var status = $('#status').find('option').val();
+        var newProjectID = 12;
 
         console.log('test');
         $.ajax({
             url: 'xhr/new_task.php',
             data: {
+                projectID: '' + newProjectID,
                 taskName: taskName,
                 taskDescription: taskDesc,
                 dueDate: date,
@@ -257,7 +266,7 @@
                 if(response.error){
                     $('#taskform').find('.err_msg').text(response.error);
                 }else{
-                    loadTasks();
+                    loadNewTasks();
                 }
             }
         });
@@ -288,6 +297,8 @@
 
         return false;
     });
+
+
 	
 	/*	
 	==================================== END EVENTS 
@@ -308,18 +319,68 @@
 		return false;
 	};
 
+    var getProject = function(){
+        $.ajax({
+            url: 'xhr/get_projects.php',
+            type: 'get',
+            dataType: 'json',
+            success: function(response){
+                loadNewProjects();
+            }
+        });
+    };
+
     //Used to link the Tasks to the template_task page
-    var tasks = function(){
+    var getTasks = function(){
         $.ajax({
             url: 'xhr/get_tasks.php',
             type: 'get',
             dataType: 'json',
             success: function(response){
-                loadTasks();
+                loadTaskPage();
             }
 
         });
         return false;
+    };
+
+    //Updates or Edits the task
+    var updateTask = function(id, date){
+        $.ajax({
+            url: 'xhr/update_task.php',
+            type: 'post',
+            data: {
+                taskID: id ? id : currentInfo.id,
+                taskName: currentInfo.taskName,
+                taskDescription: currentInfo.taskDescription,
+                status: currentInfo.status,
+                dueDate: date ? date : currentInfo.dueDate
+            },
+            dataType: 'json',
+            success: function(response){
+                getTasks();
+            }
+        });
+    };
+
+    //Updates/Edits Project
+    var updateProject = function(id, date){
+        $.ajax({
+            url: 'xhr/update_project.php',
+            type: 'post',
+            data: {
+                projectID: id ? id : currentInfo.id,
+                projectName: currentInfo.projectName,
+                projectDescription: currentInfo.projectDescription,
+                status: currentInfo.status,
+                dueDate: date ? date : currentInfo.dueDate
+
+            },
+            dataType: 'json',
+            success: function(response){
+                getProject();
+            }
+        });
     };
 
 
